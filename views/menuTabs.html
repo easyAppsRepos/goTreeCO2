@@ -1,0 +1,58 @@
+<jsv-header style="color: white; font-size: 23px;" class="jsv-no-border bgTreeco">  
+
+	<i id='iconMainMenu' class="fa fa-bars"></i>	
+	<a id='tituloTab'>Premios</a>
+
+</jsv-header>
+
+<jsv-tabs class="bgTreeco">
+
+	<jsv-tab class="active">
+		<i style="color: #074A32;" class="fa fa-trophy"></i>
+	</jsv-tab>
+	<jsv-tab>
+		<i style="color: #074A32;" class="fa fa-user iconHeader"></i>
+	</jsv-tab>
+	<jsv-tab>
+		<i style="color: #074A32;" class="fa fa-globe"></i>
+	</jsv-tab>
+
+</jsv-tabs>
+
+<jsv-content class="has-tabs">
+
+	<jsv-tab class="active bgWhite">
+
+		<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewB')">Ver logros</button>
+		<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewC')">Canjear mis puntos</button>
+
+	</jsv-tab>
+
+	<jsv-tab class="bgWhite">
+		<div style="height: 100%; width: 100%; position: absolute;">
+			<div class="divProfileInfo itemsMenu">
+				<img class="userPicture" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c0.55.720.720/407361_136594676498465_608916308_n.jpg?oh=eccdba3dfa1799c8010df1192e2f4bc2&oe=566D0780&__gda__=1450958675_36f6de2291d18e094aa33806a071c5e2"/>
+				<span>Fulanito de Tal</span>
+				<div id="progressbar">
+					<div>40%</div>
+				</div>
+				<span style="font-size: 16px; margin-top: 8px; border-bottom: 3px solid white; height: 31px;">Lvl 2: Agente de cambio</span>
+				<ul><li id='iconPoints'><p><b style="font-size: 22px;">155</b></br>Puntos Acumulados</p></li></ul>
+				<ul><li id='iconTree'><p><b style="font-size: 22px;">4</b></br>Arboles Salvados</p></li></ul>
+				<ul><li id='iconFoot'><p><b style="font-size: 22px;">32%</b></br>Reduccion de huella</p></li></ul>
+			</div>
+			<div id='questContainer'>
+				<img src='img/iconosGame/quest.png'>
+				<div id='questButton'>
+					Hacer Mision!
+				</div>
+			</div>
+
+		</div>
+	</jsv-tab>
+
+	<jsv-tab class="bgWhite">
+	<h1 class="paddingFull10">Content Tab C</h1>
+	</jsv-tab>
+
+</jsv-content>

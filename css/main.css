@@ -1,0 +1,139 @@
+
+.premioCosto{
+font-size: 15px;
+font-weight: initial;
+line-height: 2;
+}
+.bloqueado{
+opacity: 0.8;
+background-color: lightgray;
+}
+#headerLogros{
+color: #FFF;
+font-size: 23px;
+line-height: 1;
+}
+.item p{
+margin-left: 61px !important;
+}
+.item p b{
+font-size: 17px;
+}
+.imgLogro{
+width: 50px;
+height: 50px;
+position:absolute;
+}
+#iconMainMenu{
+left: 0px;
+position: absolute;
+margin-left: 24px;
+} 
+.userPicture{
+height: 62px;
+border-radius: 360px;
+margin-top: 13px;
+border: solid 2px white;
+}
+#tituloTab{
+position: absolute;
+left: 0;
+margin-left: 80px;
+line-height: 1.2;
+}
+
+#iconLogro{background: url("../img/logros.png") no-repeat scroll 0% 0% transparent; }
+#iconPoints{
+background: url("../img/iconosGame/chanchito.png") no-repeat scroll 0% 0% transparent; 
+height: 48px;}
+#iconTree{
+background: url("../img/iconosGame/arbol.png") no-repeat scroll 0% 0% transparent; 
+height: 48px;}
+#iconFoot{
+
+background: url("../img/iconosGame/foot.png") no-repeat scroll 0% 0% transparent; 
+height: 48px;
+}
+#icons{background: url("../img/coin.png") no-repeat scroll 0% 0% transparent; }
+
+.itemsMenu>ul>li{
+padding-left: 60px;
+
+text-align: left;
+line-height: 0;
+}
+
+.itemsMenu>ul>li>p{
+text-align: justify;
+line-height: 1;
+position: absolute;
+margin-top: 14px;
+}
+
+jsv-tab div #questContainer{
+   margin-top: 379px;
+height: 100%;
+background-color: #BEE6CE;
+border-top: solid white;
+}
+
+jsv-tab div #questContainer img{
+position: absolute;
+margin-left: 42%;
+margin-top: 10px;
+}
+jsv-tab div #questContainer #questButton{
+height: 30px;
+width: 48%;
+background-color: #0C8F62;
+margin-left: 26%;
+position: absolute;
+margin-top: 68px;
+border-radius: 7px;
+text-align: center;
+line-height: 2;
+font-size: 15px;
+color: white;
+font-weight: initial;
+}
+.itemsMenu>ul{
+list-style: none inside none;
+padding: 0 !important;
+margin-left: 9px;
+}
+
+.divProfileInfo{
+/* background: url(../img/fondoMindco.jpg);*/
+width: 100%;
+height: height: 325px;
+background-color: #e5e5e5;
+position: absolute;
+background-size: cover;
+text-align: center;
+
+}
+
+.divProfileInfo span{
+color: #074A32;
+font-size: 21px; 
+display: inherit;
+ margin-bottom: 10px;
+ bottom: 0px; 
+font-weight:initial;
+}
+
+#progressbar {
+background-color: #000;
+border-radius: 13px;
+padding: 3px;
+width: 50%;
+margin: auto;
+}
+
+#progressbar > div {
+   background-color: orange;
+   width: 40%; /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
+}
+
