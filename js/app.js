@@ -45,8 +45,7 @@ window.addEventListener('load', function() {
 	 $JSView
         .initView('viewLogin');
 
-	var networkState = navigator.connection.type;
- 	alert("dev id: "+device.uuid+"ss: "networkState);
+
 }, false);
 
 
@@ -124,6 +123,10 @@ function logOut(){
 
 function loginButton(){
 
+	var networkState = navigator.connection.type;
+ 	alert("dev id: "+device.uuid+"ss: "networkState);
+	/*
+
 	//var patFemail = /(\S+)@/;
 	var whirPass= $('.loginPage div label input').eq(1).val();
 	var email=$('.loginPage div label input').eq(0).val();
@@ -164,5 +167,5 @@ function loginButton(){
 
 	}  
 
-
+*/
 }
