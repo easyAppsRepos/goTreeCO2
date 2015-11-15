@@ -83,6 +83,7 @@ window.addEventListener('load', function() {
 
 		}).fail(function(e) {
 		alert('offLineMode();');
+		alert(""+e);
 		});
 	}
 
