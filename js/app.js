@@ -1,5 +1,12 @@
 
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady(){
+alert("1234567890");
+}
+
+
 window.addEventListener('load', function() {
 
     $JSView.run('bottom');
