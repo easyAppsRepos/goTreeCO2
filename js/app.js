@@ -1,7 +1,4 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    alert("dddss");
-}
+
 
 window.addEventListener('load', function() {
 
@@ -134,7 +131,7 @@ var sss=  typeof device !== 'undefined' ? device.uuid : "Browser";
 	//var networkState = navigator.connection.type;
  	alert("id: "+sss+" dvice os: "+ppp);
 
-	alert("sss22"+device.model);
+	alert("sss22"+navigator.connection.type);
 	
 	/*
 
