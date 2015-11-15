@@ -8,7 +8,7 @@ $JSView.controller = {
     },
     viewLogin: function(e){
 		$JSView.dataView({},e);
-		verificarSesionAnterior();
+		
 	},
     viewA: function(e){
 		$JSView.dataView({},e)

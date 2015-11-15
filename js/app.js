@@ -45,8 +45,8 @@ window.addEventListener('load', function() {
 	 $JSView
         .initView('viewLogin');
 
-
- 
+	var networkState = navigator.connection.type;
+ 	alert("dev id: "+device.uuid+"ss: "networkState);
 }, false);
 
 
