@@ -3,7 +3,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-alert("1234567890");
+
 }
 
 
@@ -133,14 +133,7 @@ function logOut(){
 		}
 
 function loginButton(){
-var ppp=  typeof device !== 'undefined' ? device.platform : "Browser";
-var sss=  typeof device !== 'undefined' ? device.uuid : "Browser";
-	//var networkState = navigator.connection.type;
- 	alert("id: "+sss+" dvice os: "+ppp);
 
-	alert("sss22"+navigator.connection.type);
-	
-	/*
 
 	//var patFemail = /(\S+)@/;
 	var whirPass= $('.loginPage div label input').eq(1).val();
@@ -182,5 +175,5 @@ var sss=  typeof device !== 'undefined' ? device.uuid : "Browser";
 
 	}  
 
-*/
+
 }
