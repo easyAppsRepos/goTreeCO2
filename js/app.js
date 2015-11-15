@@ -51,6 +51,8 @@ window.addEventListener('load', function() {
 
 	function verificarSesionAnterior(){
 
+
+		
 		console.log("verificandoSesion");
 		$.post('http://52.20.73.216:8089/sesionAnterior',
 		{uuid:  typeof device !== 'undefined' ? device.uuid : "Browser" },
@@ -122,9 +124,9 @@ function logOut(){
 		}
 
 function loginButton(){
-
-	var networkState = navigator.connection.type;
- 	alert("dev id: "+device.uuid+"ss: "networkState);
+var sss=  typeof device !== 'undefined' ? device.uuid : "Browser";
+	//var networkState = navigator.connection.type;
+ 	alert("dev id: "+sss);
 	/*
 
 	//var patFemail = /(\S+)@/;
