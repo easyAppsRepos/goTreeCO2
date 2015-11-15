@@ -3,7 +3,8 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-	verificarSesionAnterior();
+	console.log("deviceready");
+	alert(device.uuid);
 }
 
 
@@ -74,13 +75,14 @@ window.addEventListener('load', function() {
 				$.jStorage.set('idSecretClient', data['idSecretClient']);
 				//notifiOnApp();
 				$JSView.goToView('menuTabs');
+				
 			}else{
 				alert('No hay sesion anterior');
 		};
 
 
 		}).fail(function(e) {
-		console.log('offLineMode();');
+		alert('offLineMode();');
 		});
 	}
 
@@ -134,7 +136,9 @@ function logOut(){
 
 function loginButton(){
 
-
+	
+	verificarSesionAnterior();
+/*
 	//var patFemail = /(\S+)@/;
 	var whirPass= $('.loginPage div label input').eq(1).val();
 	var email=$('.loginPage div label input').eq(0).val();
@@ -173,7 +177,7 @@ function loginButton(){
 	}catch(e){
 	console.log('error de conexion catch'+e);
 
-	}  
+	}  */
 
 
 }
