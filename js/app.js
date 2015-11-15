@@ -1,3 +1,8 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    alert("dddss"+device.cordova);
+}
+
 window.addEventListener('load', function() {
 
     $JSView.run('bottom');
