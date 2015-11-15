@@ -20,6 +20,7 @@
 
    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.6.0" />
    <gap:plugin name="org.apache.cordova.device" version="0.3.0" />
+   <access origin="*" />
 
 </widget>
 
