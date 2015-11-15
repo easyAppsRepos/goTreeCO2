@@ -61,11 +61,11 @@ window.addEventListener('load', function() {
 
 	function verificarSesionAnterior(){
 
-
+		var uuidDevice= typeof device !== 'undefined' ? device.uuid : "Browser";
 		
 		console.log("verificandoSesion");
 		$.post('http://52.20.73.216:8089/sesionAnterior',
-		{uuid:  typeof device !== 'undefined' ? device.uuid : "Browser" },
+		{"uuid":  uuidDevice},
 		function(data) {
 
 			if("idSecretClient" in data ){
