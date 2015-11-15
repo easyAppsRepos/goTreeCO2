@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
 	 $JSView
         .initView('viewLogin');
 
-verificarSesionAnterior();
+
  
 }, false);
 

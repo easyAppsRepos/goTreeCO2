@@ -7,7 +7,8 @@ $JSView.controller = {
         $JSView.initTabs(e);
     },
     viewLogin: function(e){
-		$JSView.dataView({},e)
+		$JSView.dataView({},e);
+		verificarSesionAnterior();
 	},
     viewA: function(e){
 		$JSView.dataView({},e)
@@ -22,3 +23,7 @@ $JSView.controller = {
 		$JSView.dataView({},e)	
 	}
 }
+
+
+
+
