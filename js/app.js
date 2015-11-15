@@ -1,6 +1,6 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-    alert("dddss"+device.cordova);
+    alert("dddss");
 }
 
 window.addEventListener('load', function() {
@@ -132,7 +132,10 @@ function loginButton(){
 var ppp=  typeof device !== 'undefined' ? device.platform : "Browser";
 var sss=  typeof device !== 'undefined' ? device.uuid : "Browser";
 	//var networkState = navigator.connection.type;
- 	alert("dev id: "+sss+" device os: "+ppp);
+ 	alert("id: "+sss+" dvice os: "+ppp);
+
+	alert("sss22"+device.model);
+	
 	/*
 
 	//var patFemail = /(\S+)@/;
