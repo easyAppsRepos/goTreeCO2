@@ -65,7 +65,7 @@ window.addEventListener('load', function() {
 				//notifiOnApp();
 				$JSView.goToView('menuTabs');
 			}else{
-				console.log('No hay sesion anterior');
+				alert('No hay sesion anterior');
 		};
 
 
@@ -161,7 +161,7 @@ function loginButton(){
 	});
 	}catch(e){
 	console.log('error de conexion catch'+e);
-	$('#modal').css({'z-index':'24','display':'none'});
+
 	}  
 
 
