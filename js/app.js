@@ -3,8 +3,18 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-	console.log("deviceready");
-	alert(device.uuid);
+
+	var state = navigator.connection.type;
+	if (state == window.Connection.NONE)
+	{
+	    alert("No tiene internet");	
+	    // doesn't have internet, notify
+	}
+	else
+	{
+	   // alert("tengo internet");	
+	    verificarSesionAnterior();
+	}
 }
 
 
@@ -137,24 +147,8 @@ function logOut(){
 
 function loginButton(){
 
-	
-	
+		
 
-	var state = navigator.connection.type;
-	if (state == window.Connection.NONE)
-	{
-	    alert("NO NO internet");	
-	    // doesn't have internet, notify
-	}
-	else
-	{
-	    alert("tengo internet");	
-	    verificarSesionAnterior();
-	}
-
-
-
-/*
 	//var patFemail = /(\S+)@/;
 	var whirPass= $('.loginPage div label input').eq(1).val();
 	var email=$('.loginPage div label input').eq(0).val();
@@ -184,16 +178,16 @@ function loginButton(){
 	$JSView.goToView('menuTabs');	
 
 	}else{
-	console.log('Credenciales Invalidos, intente nuevamente');
+	alert('Credenciales Invalidos, intente nuevamente');
 
 	}	
 	}).fail(function(e) {
-	console.log('error de conexion fail');
+	alert('error de conexion fail');
 	});
 	}catch(e){
-	console.log('error de conexion catch'+e);
+	alert('error de conexion catch'+e);
 
-	}  */
+	}  
 
 
 }
