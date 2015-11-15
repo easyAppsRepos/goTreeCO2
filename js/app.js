@@ -124,9 +124,10 @@ function logOut(){
 		}
 
 function loginButton(){
+var ppp=  typeof device !== 'undefined' ? device.platform : "Browser";
 var sss=  typeof device !== 'undefined' ? device.uuid : "Browser";
 	//var networkState = navigator.connection.type;
- 	alert("dev id: "+sss);
+ 	alert("dev id: "+sss+" device os: "+ppp);
 	/*
 
 	//var patFemail = /(\S+)@/;
