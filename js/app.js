@@ -138,7 +138,22 @@ function logOut(){
 function loginButton(){
 
 	
-	verificarSesionAnterior();
+	
+
+	var state = navigator.connection.type;
+	if (state == window.Connection.NONE)
+	{
+	    alert("NO NO internet");	
+	    // doesn't have internet, notify
+	}
+	else
+	{
+	    alert("tengo internet");	
+	    verificarSesionAnterior();
+	}
+
+
+
 /*
 	//var patFemail = /(\S+)@/;
 	var whirPass= $('.loginPage div label input').eq(1).val();
