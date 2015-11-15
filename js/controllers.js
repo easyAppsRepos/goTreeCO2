@@ -6,6 +6,9 @@ $JSView.controller = {
         },e)
         $JSView.initTabs(e);
     },
+    viewLogin: function(e){
+		$JSView.dataView({},e)
+	},
     viewA: function(e){
 		$JSView.dataView({},e)
 	},

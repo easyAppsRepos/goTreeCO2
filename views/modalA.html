@@ -1,8 +1,19 @@
-<jsv-header>
-    <button-header-left onclick="$JSView.closeModal('modalA')">X</button-header-left>
-    Modal A
-    <button-header-right"></button-header-right>
+<jsv-header class='bgTreeco' id='headerLogros'>
+    <button-header-left onclick="$JSView.closeModal('modalA')"><i style="font-size: 39px; color: white; line-height: 0;" class="fa fa-times-circle"></i>
+</button-header-left>
+    Registrarse
+    
 </jsv-header>
-<jsv-content>
-    <h1 class="paddingFull10">Title View Modal A</h1>
+<jsv-content style='background-color: #E5E5E5;'>
+
+    <div>
+    	<label class="item createUs"><input type="text" placeholder="Nombre"></label>
+    	<label class="item createUs"><input type="email" placeholder="Email"></label>
+	<label class="item createUs"><input type="password" placeholder="Password"></label>
+	<label class="item createUs"><input type="password" placeholder="Confirm password"></label>
+	<button id="loginButton" onClick='createUser()'>Create Account</button>
+	
+    </div>
+
 </jsv-content>
+

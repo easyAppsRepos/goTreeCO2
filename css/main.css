@@ -1,8 +1,12 @@
 
+#logoLogin{
+height: 120px;
+}
 .premioCosto{
 font-size: 15px;
 font-weight: initial;
 line-height: 2;
+
 }
 .bloqueado{
 opacity: 0.8;
@@ -62,6 +66,47 @@ padding-left: 60px;
 text-align: left;
 line-height: 0;
 }
+.createUs{
+margin-top: 17px;
+width: 90%;
+margin-left: 5%;
+
+}
+.spanLogin{
+width: 38%;
+position: absolute;
+color:white;
+text-align: center;
+height: 43px;
+font-size: 18px;
+line-height: 2;
+}
+.loginPage{
+background-color:#0C8F63;
+top: 160px;
+
+}
+
+#loginButton{
+background-color: #074A32;
+color: #FFF;
+width: 76%;
+margin-left: 12%;
+margin-top: 28px;
+border: none;
+font-size: 20px;
+
+}
+.loginPage div{
+margin-top: 52px;
+width: 76%;
+margin-left: 12%;
+}
+
+.loginPage div .item{
+border-radius: 4px;
+margin-top: 8px;
+}
 
 .itemsMenu>ul>li>p{
 text-align: justify;
@@ -72,7 +117,7 @@ margin-top: 14px;
 
 jsv-tab div #questContainer{
    margin-top: 379px;
-height: 100%;
+
 background-color: #BEE6CE;
 border-top: solid white;
 }
