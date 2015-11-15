@@ -24,6 +24,7 @@
    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-device" source="npm" version="1.0.1" />
+   <gap:plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
 
    <access origin="*" subdomains="true" />
 
