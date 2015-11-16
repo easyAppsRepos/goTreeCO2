@@ -34,13 +34,13 @@
 		<div style="height: 100%; width: 100%; position: absolute;background-color: #E5E5E5;">
 			<div class="divProfileInfo itemsMenu">
 				<img class="userPicture" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c0.55.720.720/407361_136594676498465_608916308_n.jpg?oh=eccdba3dfa1799c8010df1192e2f4bc2&oe=566D0780&__gda__=1450958675_36f6de2291d18e094aa33806a071c5e2"/>
-				<span>Fulanito de Tal</span>
-				<div id="progressbar">
-					<div>40%</div>
+				<span>{{name}}</span>
+				<div id="progressbar" >
+					<div style='width:{{porcent}}%'>{{porcent}}%</div>
 				</div>
-				<span style="font-size: 16px; margin-top: 8px; border-bottom: 3px solid white; height: 31px;">Lvl 2: Agente de cambio</span>
-				<ul><li id='iconPoints'><p><b style="font-size: 22px;">155</b></br>Puntos Acumulados</p></li></ul>
-				<ul><li id='iconTree'><p><b style="font-size: 22px;">4</b></br>Arboles Salvados</p></li></ul>
+				<span style="font-size: 16px; margin-top: 8px; border-bottom: 3px solid white; height: 31px;">Lvl {{lvl}}: {{titulo}}</span>
+				<ul><li id='iconPoints'><p><b style="font-size: 22px;">{{userPts}}</b></br>Puntos Acumulados</p></li></ul>
+				<ul><li id='iconTree'><p><b style="font-size: 22px;">{{userTree}}</b></br>Arboles Salvados</p></li></ul>
 				<ul><li id='iconFoot'><p><b style="font-size: 22px;">32%</b></br>Reduccion de huella</p></li></ul>
 			</div>
 			<div id='questContainer'>

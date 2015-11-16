@@ -81,8 +81,8 @@ $JSView = {
         for (var x in obj) {
             console.log(x);
             console.log(obj[x]);
-            if(!obj[x]) obj[x]='';
-            contentView = contentView.replace(new RegExp(x, 'g'), obj[x]);
+            if(!obj[x]) obj[x]='0';
+            contentView = contentView.replace(new RegExp('{{'+x+'}}', 'g'), obj[x]);
         }
         //Remove the previous contents of the container
         $v.select('#' + e).innerHTML = ''
@@ -398,8 +398,8 @@ $JSView = {
         for (var x in obj) {
             console.log(x);
             console.log(obj[x]);
-            if(!obj[x]) obj[x]='';
-            contentView = contentView.replace(new RegExp(x, 'g'), obj[x]);
+            if(!obj[x]) obj[x]='0';
+            contentView = contentView.replace(new RegExp('{{'+x+'}}', 'g'), obj[x]);
         }
         //Remove the previous contents of the container
         $v.select('#' + e + ' jsv-content jsv-list').innerHTML = ''

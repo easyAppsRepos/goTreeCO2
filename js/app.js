@@ -171,6 +171,12 @@ function loginButton(){
 	console.log(JSON.stringify(data));
 	idScretClient = data["idSecretClient"];
 	logId = data["idSession"]; 
+	userName = data["nombre"]; 
+	userPts = data["pts"]; 
+	userExp = data["exp"]; 
+	userTree = data["tree"]; 
+	titulo = data["titulo"]; 
+	lvl = data["lvl"]; 
 
 	$.jStorage.set('idSecretClient', data['idSecretClient']);
 	$.jStorage.set('logAs', logAs);
