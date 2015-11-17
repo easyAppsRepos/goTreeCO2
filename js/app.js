@@ -65,9 +65,26 @@ window.addEventListener('load', function() {
 	 $JSView
         .initView('viewLogin');
 
-
 }, false);
-
+	
+	function getProfile(data){
+		
+	console.log(JSON.stringify(data));
+	idScretClient = data["idSecretClient"];
+	logId = data["idSession"]; 
+	userName = data["nombre"]; 
+	userPts = data["pts"]; 
+	userExp = data["exp"]; 
+	userTree = data["tree"]; 
+	titulo = data["titulo"]; 
+	lvl = data["lvl"];
+ 	//$.jStorage.set('idSecretClient', data['idSecretClient']);
+	//$.jStorage.set('logAs', logAs);
+	$JSView.goToView('menuTabs');
+	
+	//apagar spinner
+		
+	}
 
 	function verificarSesionAnterior(){
 
@@ -79,15 +96,17 @@ window.addEventListener('load', function() {
 		function(data) {
 
 			if("idSecretClient" in data ){
-				console.log(data);
+				/*console.log(data);
 				idScretClient = data["idSecretClient"];
 				logId = data["logId"];
 				$.jStorage.set('idSecretClient', data['idSecretClient']);
 				//notifiOnApp();
-				$JSView.goToView('menuTabs');
+				//$JSView.goToView('menuTabs');*/
+
+				getProfile(data);
 				
 			}else{
-				alert('No hay sesion anterior');
+				console.log('No hay sesion anterior');
 		};
 
 
@@ -146,54 +165,22 @@ function logOut(){
 		}
 
 function loginButton(){
-
-		
-
-	//var patFemail = /(\S+)@/;
+	
 	var whirPass= $('.loginPage div label input').eq(1).val();
 	var email=$('.loginPage div label input').eq(0).val();
-
-		 
 	try{
-	//var logAs =email.match(patFemail)[1];
 	var logAs =email;
-
 	$.post('http://52.20.73.216:8089/login',{
 	"email" : email,
 	"password": whirPass,
 	"phone": typeof device !== 'undefined' ? device.model : "Browser",
 	"os": typeof device !== 'undefined' ? device.platform : "Browser",
 	"uuid":  typeof device !== 'undefined' ? device.uuid : "Browser",
-	"pushKey":  typeof device !== 'undefined' ? "Browser" : "Browser" //mientras no tenga PN
+	"pushKey":  typeof device !== 'undefined' ? "Browser" : "Browser"
 	},function(data){
-	if(data["status"] == 200){
-
-	console.log(JSON.stringify(data));
-	idScretClient = data["idSecretClient"];
-	logId = data["idSession"]; 
-	userName = data["nombre"]; 
-	userPts = data["pts"]; 
-	userExp = data["exp"]; 
-	userTree = data["tree"]; 
-	titulo = data["titulo"]; 
-	lvl = data["lvl"]; 
-
-	$.jStorage.set('idSecretClient', data['idSecretClient']);
-	$.jStorage.set('logAs', logAs);
-
-	$JSView.goToView('menuTabs');	
-
-	}else{
-	alert('Credenciales Invalidos, intente nuevamente');
-
-	}	
-	}).fail(function(e) {
-	alert('error de conexion fail');
-	});
-	}catch(e){
-	alert('error de conexion catch'+e);
-
-	}  
-
-
+	if(data["status"] == 200){getProfile(data);}
+	else{alert('Credenciales Invalidos, intente nuevamente');}	
+	}).fail(function(e) {alert('error de conexion fail');});
+	}catch(e){alert('error de conexion catch'+e);
+	} 
 }
