@@ -184,7 +184,7 @@ function loginButton(){
 	"uuid":  typeof device !== 'undefined' ? device.uuid : "Browser",
 	"pushKey":  typeof device !== 'undefined' ? "Browser" : "Browser"
 	},function(data){
-	if(data["status"] == 200){getProfile(data);}
+	if(data["status"] == 200){console.log("Autenticado Correctamente"); getProfile(data);}
 	else{alert('Credenciales Invalidos, intente nuevamente');}	
 	}).fail(function(e) {alert('error de conexion fail');});
 	}catch(e){alert('error de conexion catch'+e);
@@ -238,7 +238,7 @@ function depositoExitoso(tipoDep){
 
 
 function cargarRanking(){
-	 $JSView.refreshRank();
+	 refreshRank();
 
 	var rank ='';
 
