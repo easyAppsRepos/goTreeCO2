@@ -141,6 +141,7 @@ function createUser(){
 
 	if(data["status"] == 200){
 		alert("Cuenta creada Exitosamente");
+		$JSView.closeModal('modalA');
 	}else{
 
 	console.log('Ha ocurrido un error');
@@ -160,9 +161,13 @@ function logOut(){
 	//$.jStorage.flush();
 	//try{navigator.splashscreen.show();}catch(e){}
 	//window.location.reload(true);
-	console.log(data);
+	if(data["status"] == 200){
+	$JSView.goToView('viewLogin');
+	console.log("cerrando session");}
+	else{alert("Ha ocurrido un error cerrando la sesion");}
+
 	});
-	$JSView.goToView('viewLogin');	
+		
 		}
 
 function loginButton(){
@@ -268,6 +273,11 @@ function cargarRanking(){
 
 
 
+	//jrCH
+   function refreshRank(){
+        console.log('refreshRank');
+        $("#ranking").html(spinner);
+    }//jrCH
 
 
 

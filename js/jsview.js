@@ -344,23 +344,18 @@ $JSView = {
                         $v.selectAll('#' + e + ' jsv-content > jsv-tab')[i].classList.add('active');
  			//jrChg para cambiar el titulo de los tab
 			i==0 ? $('#tituloTab').text("Premios"):i==1?$('#tituloTab').text("Perfil"):i==2?$('#tituloTab').text("Ranking"):null;
-			i==2?cargarRanking():null;
+			i==2?cargarRanking():console.log("tab:"+i);
                     } 
                 }
             
             }, false);  
         }
-	$("#profileTab").trigger("click"); //jrChg
+	//$("#profileTab").trigger("click"); //jrChg
     },
     initRefresh: function(e){
         console.log('initDoRefresh');
         $v.select('jsv-refresh').innerHTML = spinner;
     },
-	//jrCH
-    refreshRank: function(){
-        console.log('refreshRank');
-        $("#ranking").html(spinner);
-    },//jrCH
 
     initLoadMore: function(e){
         
