@@ -157,11 +157,11 @@ function createUser(){
 	
 function logOut(){
 	$.post('http://52.20.73.216:8089/logout', {"logId" : logId}, function(data){
-	$.jStorage.flush();
+	//$.jStorage.flush();
 	//try{navigator.splashscreen.show();}catch(e){}
-	window.location.reload(true);
+	//window.location.reload(true);
 	});
-		
+	$JSView.goToView('viewLogin');	
 		}
 
 function loginButton(){

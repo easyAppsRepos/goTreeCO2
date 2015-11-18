@@ -21,6 +21,7 @@
 
 
 
+   <gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>
    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-device" source="npm" version="1.0.1" />
