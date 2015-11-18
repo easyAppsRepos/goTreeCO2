@@ -185,7 +185,7 @@ function loginButton(){
 	} 
 }
 
-function getQRr(){userPts=999;}
+
 function getQR(){
 
   cordova.plugins.barcodeScanner.scan(
