@@ -160,6 +160,7 @@ function logOut(){
 	//$.jStorage.flush();
 	//try{navigator.splashscreen.show();}catch(e){}
 	//window.location.reload(true);
+	console.log(data);
 	});
 	$JSView.goToView('viewLogin');	
 		}
@@ -199,7 +200,7 @@ function getQR(){
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);*/
 	try{
-	var logAs =email;
+	
 	$.post('http://52.20.73.216:8089/verificarQR',{
 	"email" : idScretClient,
 	"codigo": codigo,
