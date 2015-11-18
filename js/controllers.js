@@ -18,7 +18,8 @@ $JSView.controller = {
 	    'lvl':lvl,
 	    'porcent': porcent
         },e)
-        $JSView.initTabs(e);
+
+       $JSView.initTabs(e);
     },
     viewLogin: function(e){
 		$JSView.dataView({},e);

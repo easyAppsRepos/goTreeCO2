@@ -349,6 +349,7 @@ $JSView = {
             
             }, false);  
         }
+	$("#profileTab").trigger("click"); //jrChg
     },
     initRefresh: function(e){
         console.log('initDoRefresh');

@@ -185,18 +185,50 @@ function loginButton(){
 	} 
 }
 
+function getQRr(){userPts=999;}
 function getQR(){
 
   cordova.plugins.barcodeScanner.scan(
       function (result) {
-          alert("We got a barcode\n" +
+	var str = result.text;
+	var res = str.split(" ");
+	var codigo=res[0]; 
+	 tipoDep = res[1]; 
+          /*alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
+                "Cancelled: " + result.cancelled);*/
+	try{
+	var logAs =email;
+	$.post('http://52.20.73.216:8089/verificarQR',{
+	"email" : idScretClient,
+	"codigo": codigo,
+	"tipo": tipoDep},function(data){
+	if(data["status"] == 200){depositoExitoso(tipoDep);}
+	else{alert('Lo sentimos, codigo invalido');}	
+	}).fail(function(e) {alert('error de conexion fail');});
+	}catch(e){alert('error de conexion catch'+e);
+	} 
+
       }, 
       function (error) {
-          alert("Scanning failed: " + error);
+          alert("Error en el scan: " + error);
       }
    );
-
+	
 }
+
+function depositoExitoso(tipoDep){
+	var puntosGanados = 100;
+	alert("Ha realizado un deposito exitoso de: "+tipoDep+"\n" +
+                "Ha ganado: " + puntosGanados + "pts");
+	//efectofalta
+	userPts=userPts+puntosGanados;
+	$JSView.controller.menuTabs('menuTabs');
+}
+
+
+
+
+
+
