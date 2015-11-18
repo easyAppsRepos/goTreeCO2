@@ -280,7 +280,7 @@ function cargarRanking(){
     }//jrCH
 
    function closeModal(){$JSView.closeModal('modalA');
-			cosole.log('modalCerrado');}
+			console.log('modalCerrado');}
 
 
 
