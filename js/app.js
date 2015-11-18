@@ -282,5 +282,7 @@ function cargarRanking(){
    function closeModal(){$JSView.closeModal('modalA');
 			console.log('modalCerrado');}
 
-
+   function openModal(){
+	$JSView.openModal('modalA');
+	}
 
