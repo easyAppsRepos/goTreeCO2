@@ -9,16 +9,6 @@ line-height: 2;
 
 }
 
-.newUserModal{
-position: absolute;
-z-index: 13;
-width: 80%;
-margin-left: 10%;
-background-color: #E5E5E5;
-height: 420px;
-margin-top: 31px;
-display:none;
-}
 .h1Rank{
 text-align: center; 
 color: rgb(7, 74, 50);
@@ -130,15 +120,6 @@ text-align: justify;
 line-height: 1;
 position: absolute;
 margin-top: 14px;
-}
-.darkPage{
-height: 100%;
-width: 100%;
-background-color: black;
-z-index: 12;
-position: absolute;
-opacity: 0.88;
-display:none;
 }
 
 jsv-tab div #questContainer{
