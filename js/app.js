@@ -279,9 +279,8 @@ function cargarRanking(){
         $("#ranking").html(spinner);
     }//jrCH
 
-
-
-
+   function closeModal(){$JSView.closeModal('modalA');
+			cosole.log('modalCerrado');}
 
 
 
