@@ -1,7 +1,8 @@
 $JSView.controller = {
     menuTabs:function(e){
 	
-/********************************************************************************/
+
+/*******************************************************************************/
 		var maxP = lvl==1 ? 200 : lvl==2 ? 400 : lvl==3 ? 650 : 0;
 	porcent = Math.round((userExp/maxP)*100);
 	 console.log(porcent+"-"+maxP+"-"+userExp);

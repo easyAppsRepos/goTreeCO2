@@ -344,6 +344,7 @@ $JSView = {
                         $v.selectAll('#' + e + ' jsv-content > jsv-tab')[i].classList.add('active');
  			//jrChg para cambiar el titulo de los tab
 			i==0 ? $('#tituloTab').text("Premios"):i==1?$('#tituloTab').text("Perfil"):i==2?$('#tituloTab').text("Ranking"):null;
+			i==2?cargarRanking():null;
                     } 
                 }
             
@@ -355,6 +356,12 @@ $JSView = {
         console.log('initDoRefresh');
         $v.select('jsv-refresh').innerHTML = spinner;
     },
+	//jrCH
+    refreshRank: function(){
+        console.log('refreshRank');
+        $("#ranking").html(spinner);
+    },//jrCH
+
     initLoadMore: function(e){
         
         console.log('initLoadMore');
@@ -394,6 +401,7 @@ $JSView = {
         console.log('dataView JSVContainersViews[e] -> ' + JSVContainersViews[e]);
         
         item = $v.select('#' + e + ' jsv-content jsv-list').innerHTML;
+	// item = $v.select('#' + e + ' jsv-list').innerHTML;
         
         var contentView = item;
         for (var x in obj) {
@@ -403,12 +411,14 @@ $JSView = {
             contentView = contentView.replace(new RegExp('{{'+x+'}}', 'g'), obj[x]);
         }
         //Remove the previous contents of the container
-        $v.select('#' + e + ' jsv-content jsv-list').innerHTML = ''
+       $v.select('#' + e + ' jsv-content jsv-list').innerHTML = ''  //origina.
+	 //$v.select('#' + e + ' jsv-list').innerHTML = ''
         //Add the new contents of the container
-        $v.select('#' + e + ' jsv-content jsv-list').innerHTML += contentView;
+        $v.select('#' + e + ' jsv-content jsv-list').innerHTML += contentView; //original
+	// $v.select('#' + e + ' jsv-list').innerHTML += contentView; 
         
         console.timeEnd('dataView');
-        console.groupEnd();
+       console.groupEnd();
         
     }
 }

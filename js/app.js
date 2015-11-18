@@ -13,7 +13,7 @@ function onDeviceReady(){
 	else
 	{
 	   // alert("tengo internet");	
-	    verificarSesionAnterior();
+	    verificarSesionAnterior(); //activar esto jrch
 	}
 }
 
@@ -63,7 +63,7 @@ window.addEventListener('load', function() {
     $JSView
         .initView('menuTabs');*/
 	 $JSView
-        .initView('viewLogin');
+        .initView('viewLogin');//cambiar por login
 
 }, false);
 	
@@ -227,6 +227,41 @@ function depositoExitoso(tipoDep){
 	userPts=userPts+puntosGanados;
 	$JSView.controller.menuTabs('menuTabs');
 }
+
+
+
+function cargarRanking(){
+	 $JSView.refreshRank();
+
+	var rank ='';
+
+	try{
+	$.post('http://52.20.73.216:8089/getRanking',{"s":"s"},function(data){
+	if(data["status"] == 200){console.log(data['data'][0].nombre);
+			for(i=0;i<data["data"].length;i++){
+	i%2==0?color="background-color:aliceblue":color="";
+	rank=rank+'<jsv-list class="photo-list"><jsv-item class="item" style="'+color+'"'+'><div class="photo"><img src="img/iconosGame/'+(i+1)+".png"+'"></div><h3>'+data['data'][0].nombre+'</h3><text><h3>EXP ganada: '+data['data'][0].cantExp+'</h3></text></jsv-item>';
+
+	}
+
+		$("#ranking").html(rank); 
+	console.log(rank);
+
+		}
+	else{alert('Ha ocurrido un error');}	
+	}).fail(function(e) {alert('error de conexion fail');});
+	}catch(e){alert('error de conexion catch'+e);
+	} 
+
+}
+
+
+
+
+
+
+
+
 
 
 

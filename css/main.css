@@ -8,6 +8,13 @@ font-weight: initial;
 line-height: 2;
 
 }
+
+.h1Rank{
+text-align: center; 
+color: rgb(7, 74, 50);
+}
+
+
 .bloqueado{
 opacity: 0.8;
 background-color: lightgray;
@@ -116,30 +123,28 @@ margin-top: 14px;
 }
 
 jsv-tab div #questContainer{
-   margin-top: 379px;
 
 background-color: #BEE6CE;
 border-top: solid white;
 }
 
 jsv-tab div #questContainer img{
-position: absolute;
-margin-left: 42%;
+
 margin-top: 10px;
 }
 jsv-tab div #questContainer #questButton{
-height: 30px;
+height: 38px;
 width: 48%;
 background-color: #0C8F62;
 margin-left: 26%;
 position: absolute;
-margin-top: 68px;
 border-radius: 7px;
 text-align: center;
-line-height: 2;
+line-height: 2.5;
 font-size: 15px;
-color: white;
+color: #FFF;
 font-weight: initial;
+margin-top: 12px;
 }
 .itemsMenu>ul{
 list-style: none inside none;
