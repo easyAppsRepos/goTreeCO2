@@ -23,5 +23,27 @@
 
         <title>GoTreeCo2</title>
     </head>
-    <body></body>
+    <body>
+	<div class="darkPage"></div>
+	<div class="newUserModal">
+		<jsv-header class='bgTreeco' style="color: #FFF;font-size: 23px;line-height: 1;">
+		<button-header-left onClick="closeModalB()"><i style="font-size: 39px; color: white; line-height: 0;" class="fa fa-times-circle"></i>
+		</button-header-left>
+		Registrarse
+
+		</jsv-header>
+		<div class="container" style="background-color: #E5E5E5;margin-top: 78px;">
+
+			<div>
+				<label class="item createUs"><input type="text" placeholder="Nombre"></label>
+				<label class="item createUs"><input type="email" placeholder="Email"></label>
+				<label class="item createUs"><input type="password" placeholder="Password"></label>
+				<label class="item createUs"><input type="password" placeholder="Confirm password"></label>
+				<button id="loginButton" onClick='createUser()'>Create Account</button>
+
+			</div>
+		</div>
+	</div>
+
+    </body>
 </html>

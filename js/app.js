@@ -283,6 +283,13 @@ function cargarRanking(){
 			console.log('modalCerrado');}
 
    function openModal(){
-	$JSView.openModal('modalA');
+	//$JSView.openModal('modalA');
+	$('.darkPage').show();
+	$('.newUserModal').show();
 	}
 
+     function closeModalB(){
+	$('.darkPage').hide();
+	$('.newUserModal').hide();
+
+	}
