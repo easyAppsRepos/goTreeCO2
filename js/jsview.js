@@ -180,7 +180,8 @@ $JSView = {
         //Execute the function controller of this view
         eval( '$JSView.controller.' + e + '("' + e + '")' );
         //Change the url
-        window.history.pushState(e, '', '/www/index.html#'+e);
+        //window.history.pushState(e, '', '/www/index.html#'+e);
+	 window.history.pushState(e, '', 'index.html#'+e); //jrCH
     },
     closeModal: function(e){
         //Change the class and hide modal
