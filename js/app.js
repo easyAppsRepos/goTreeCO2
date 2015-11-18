@@ -225,6 +225,8 @@ function depositoExitoso(tipoDep){
                 "Ha ganado: " + puntosGanados + "pts");
 	//efectofalta
 	userPts=userPts+puntosGanados;
+	userExp=userExp+50;
+	calcularPorcentaje();
 	$JSView.controller.menuTabs('menuTabs');
 }
 
@@ -240,7 +242,7 @@ function cargarRanking(){
 	if(data["status"] == 200){console.log(data['data'][0].nombre);
 			for(i=0;i<data["data"].length;i++){
 	i%2==0?color="background-color:aliceblue":color="";
-	rank=rank+'<jsv-list class="photo-list"><jsv-item class="item" style="'+color+'"'+'><div class="photo"><img src="img/iconosGame/'+(i+1)+".png"+'"></div><h3>'+data['data'][0].nombre+'</h3><text><h3>EXP ganada: '+data['data'][0].cantExp+'</h3></text></jsv-item>';
+	rank=rank+'<jsv-list class="photo-list"><jsv-item class="item" style="'+color+'"'+'><div class="photo"><img src="img/iconosGame/'+(i+1)+".png"+'"></div><h3>'+data['data'][i].nombre+'</h3><text><h3>EXP ganada: '+data['data'][i].cantExp+'</h3></text></jsv-item>';
 
 	}
 
@@ -257,7 +259,12 @@ function cargarRanking(){
 
 
 
-
+	function calcularPorcentaje(){
+		var maxP = lvl==1 ? 200 : lvl==2 ? 400 : lvl==3 ? 650 : 0;
+	porcent = Math.round((userExp/maxP)*100);
+	 console.log(porcent+"-"+maxP+"-"+userExp);
+	//$('#progressbar div').css({"width": porcent+'%'});
+	}
 
 
 
