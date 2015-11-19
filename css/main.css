@@ -134,6 +134,15 @@ position: absolute;
 margin-top: 14px;
 }
 
+.containerComprar{
+background-color: #E5E5E5;
+width: 88%;
+margin-left: 6%;
+margin-top: 89px;
+text-align: center;
+
+border-radius: 12px;
+}
 jsv-tab div #questContainer{
 
 

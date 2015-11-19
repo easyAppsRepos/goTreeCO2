@@ -66,13 +66,28 @@ window.addEventListener('load', function() {
         .initView('viewLogin');//cambiar por login
 
 }, false);
-	
+
 
 	function darkModalOff(){
 		$('#modal').hide();
 		$('#modal').html('');
 	}
 
+	function cerrarNoti(){
+	$('#modal').html('');
+	$('#modal').hide();
+	}
+	
+	function mostrarNoti(){
+	var noti="<div class='containerComprar'><i onClick='cerrarNoti()' style='font-size: 39px; color: #0C8F63;  padding-top: 5px;' class='fa fa-times-circle'></i><p style='font-size: 27px;'>Deposito Valido!</p><div><img src='img/botella.png'><img src='img/check.png'></div><p style='font-size: 18px;'>Puntos: <b style='font-size: 23px;'>+50</b></p><p style='font-size: 18px;'>Exp: <b style='font-size: 23px;'>+50</b></p><div style='height: 10px; width: 100%;'></div></div>"
+	$('#modal').html(noti);
+	$('#modal').show();
+	}
+
+
+	function comprarModal(){
+
+	}
 	function getProfile(data){
 		
 	console.log(JSON.stringify(data));
@@ -250,9 +265,8 @@ function getQR(){
 }
 
 function depositoExitoso(tipoDep){
-	var puntosGanados = 100;
-	alert("Ha realizado un deposito exitoso de: "+tipoDep+"\n" +
-                "Ha ganado: " + puntosGanados + "pts");
+	var puntosGanados = 50;
+	mostrarNoti();		
 	//efectofalta
 	userPts=userPts+puntosGanados;
 	userExp=userExp+50;
