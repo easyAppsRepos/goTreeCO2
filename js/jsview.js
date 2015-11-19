@@ -192,10 +192,11 @@ $JSView = {
         $v.select('#' + e).classList.remove('JSVcontainerCenter')
         //Return to previous url
         window.history.back()
-        setTimeout(function(){
+	JSVActualView = window.history.state;
+        //setTimeout(function(){
             //Assign actual view to global var
-            JSVActualView = window.history.state
-        },0);
+       //     JSVActualView = window.history.state
+       // },0);
     },
     back: function(e){
         //Return to previous url       
