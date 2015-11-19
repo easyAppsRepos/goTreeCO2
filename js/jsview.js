@@ -208,6 +208,9 @@ $JSView = {
         setTimeout(function(){           
            console.log("window.history.state " + windowState);
            $JSView.returnTo(window.history.state);
+		//jrCH
+		$v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
+            $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
         },10);
         
     },
@@ -228,10 +231,11 @@ $JSView = {
             //Put the new view into camera
             $v.select('#' + e).classList.add('JSVcontainerCenter')
             $v.select('#' + e).classList.remove('JSVcontainerLeft')
+		
+            
         }
-		//jrCH
-	    $v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
-            $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
+		
+
         //Assign actual view to global var
         JSVActualView = e       
     },

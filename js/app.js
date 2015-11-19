@@ -145,6 +145,7 @@ function validateEmail(ss) {
 }
 
 function createUser(){
+	darkModal();
 
 	var name=$('.createUs input').eq(0).val();
 	var email=$('.createUs input').eq(1).val();
@@ -164,15 +165,17 @@ function createUser(){
 
 	if(data["status"] == 200){
 		alert("Cuenta creada Exitosamente");
+		darkModalOff();
 		$JSView.closeModal('modalA');
 	}else{
-
+	darkModalOff();
 	console.log('Ha ocurrido un error');
 	}	
 	}).fail(function(e) {
+	darkModalOff();
 	console.log('error de conexion fail');
 	});
-	}catch(e){}  
+	}catch(e){darkModalOff();alert("Ha ocurrido un error inesperado");}  
 
 	}
 }
