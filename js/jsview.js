@@ -200,9 +200,11 @@ $JSView = {
        // },0);
     },
     back: function(e){
-        //Return to previous url       
-        window.history.back();
-        var windowState = window.history.state;
+        //Return to previous url
+	window.history.pushState('menuTabs', '', 'index.html#menuTabs');       
+       // window.history.back();
+       // var windowState = window.history.state;
+	var windowState = 'menuTabs';
         setTimeout(function(){           
            console.log("window.history.state " + windowState);
            $JSView.returnTo(window.history.state);

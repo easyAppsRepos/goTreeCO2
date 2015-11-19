@@ -171,13 +171,9 @@ function logOut(){
 		}
 
 	function backView(){
-	if(!enProceso){
-	enProceso=true;
+
 	$JSView.back();
-	 setTimeout(function(){           
-          enProceso=false;
-        },10);
-	}
+
 
 	}
 
