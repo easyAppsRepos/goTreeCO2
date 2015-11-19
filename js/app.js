@@ -3,6 +3,8 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
+
+	 document.addEventListener("backbutton", onBackKeyDown, false);
 	enProceso=false;
 	var state = navigator.connection.type;
 	if (state == window.Connection.NONE)
@@ -16,6 +18,11 @@ function onDeviceReady(){
 	    verificarSesionAnterior(); //activar esto jrch
 	}
 }
+	//onTouchEnd
+	function onBackKeyDown() {
+	if(JSVActualView=='viewLogin'){navigator.app.exitApp();}
+	if(JSVActualView=='viewA' || JSVActualView=='viewB'){alert("en viewA o B")}
+	}
 
 
 window.addEventListener('load', function() {
