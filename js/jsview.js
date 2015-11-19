@@ -75,7 +75,7 @@ $JSView = {
 //        console.group('dataView obj -> ' + obj);
 //        console.time('dataView');
         console.log('dataView e -> ' + e);
-        console.log('dataView JSVContainersViews[e] -> ' + JSVContainersViews[e]);
+        //console.log('dataView JSVContainersViews[e] -> ' + JSVContainersViews[e]);
         
         var contentView = JSVContainersViews[e];
         for (var x in obj) {
@@ -344,6 +344,7 @@ $JSView = {
     },
     //This function start the tabs
     initTabs: function(e, options){
+	console.log("en initTabs");
         for (var i = 0; i < $v.selectAll('jsv-tabs jsv-tab').length; ++i) {
             $v.selectAll('jsv-tabs jsv-tab')[i].addEventListener('click', function() { 
                 

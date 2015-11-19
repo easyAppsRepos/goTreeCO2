@@ -21,7 +21,7 @@ function onDeviceReady(){
 	//onTouchEnd
 	function onBackKeyDown() {
 	if(JSVActualView=='viewLogin'){navigator.app.exitApp();}
-	if(JSVActualView=='viewA' || JSVActualView=='viewB'){
+	if(JSVActualView=='viewA' || JSVActualView=='viewC'){
 		window.history.pushState('menuTabs', '', 'index.html#menuTabs'); 
 		var windowState = 'menuTabs';
 		$v.select('#' + JSVActualView).classList.add('JSVcontainerRight');
@@ -32,6 +32,8 @@ function onDeviceReady(){
 		$v.select('#' + 'menuTabs').classList.remove('JSVcontainerLeft');
 		JSVActualView ='menuTabs'; 
 		}
+	if(JSVActualView=='menuTabs'){navigator.app.exitApp();}
+	if(JSVActualView=='modalA'){closeModal();}	
 	}
 
 
