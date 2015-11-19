@@ -116,6 +116,7 @@ $JSView = {
             $v.select('#' + e).classList.remove('JSVcontainerRight')
         }
         //Assign actual view to global var
+	
         JSVActualView = e;
         //Execute the function controller of this view
        // eval( '$JSView.controller.' + e + '("' + e + '")' );
@@ -192,7 +193,7 @@ $JSView = {
         $v.select('#' + e).classList.remove('JSVcontainerCenter')
         //Return to previous url
         window.history.back()
-	JSVActualView = window.history.state;
+	JSVActualView = 'viewLogin';
         //setTimeout(function(){
             //Assign actual view to global var
        //     JSVActualView = window.history.state
