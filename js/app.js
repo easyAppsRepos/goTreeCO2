@@ -232,7 +232,7 @@ function depositoExitoso(tipoDep){
 	userPts=userPts+puntosGanados;
 	userExp=userExp+50;
 	calcularPorcentaje();
-	$JSView.controller.menuTabs('menuTabs');
+	$JSView.controller.menuTabs('menuTabs');//eval controller jrCH
 }
 
 

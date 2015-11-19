@@ -118,7 +118,8 @@ $JSView = {
         //Assign actual view to global var
         JSVActualView = e;
         //Execute the function controller of this view
-        eval( '$JSView.controller.' + e + '("' + e + '")' );
+       // eval( '$JSView.controller.' + e + '("' + e + '")' );
+	 $JSView.controller[e](e);
         //Change the url
         window.history.pushState(e, '"' + e+ '"', 'index.html#' + e);
         
@@ -172,13 +173,15 @@ $JSView = {
         }
     },
     openModal: function(e){
+	console.log("En openModal. La variable e es: "+e);
         //Change the class and show modal div
         $v.select('#' + e).classList.add('JSVcontainerCenter')
         $v.select('#' + e).classList.remove('JSVcontainerBottom')
         //Assign actual view to global var
         JSVActualView = e;
         //Execute the function controller of this view
-        eval( '$JSView.controller.' + e + '("' + e + '")' );
+       // eval( '$JSView.controller.' + e + '("' + e + '")' );
+	$JSView.controller[e](e);
         //Change the url
         //window.history.pushState(e, '', '/www/index.html#'+e);
 	 window.history.pushState(e, '', 'index.html#'+e); //jrCH
