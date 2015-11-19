@@ -229,6 +229,9 @@ $JSView = {
             $v.select('#' + e).classList.add('JSVcontainerCenter')
             $v.select('#' + e).classList.remove('JSVcontainerLeft')
         }
+		//jrCH
+	    $v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
+            $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
         //Assign actual view to global var
         JSVActualView = e       
     },

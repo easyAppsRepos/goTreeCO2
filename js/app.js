@@ -272,6 +272,8 @@ function depositoExitoso(tipoDep){
 	userExp=userExp+50;
 	calcularPorcentaje();
 	$JSView.controller.menuTabs('menuTabs');//eval controller jrCH
+	$v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
+        $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[1].classList.add('active');
 }
 
 
