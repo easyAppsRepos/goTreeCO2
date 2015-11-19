@@ -67,6 +67,12 @@ window.addEventListener('load', function() {
 
 }, false);
 	
+
+	function darkModalOff(){
+		$('#modal').hide();
+		$('#modal').html('');
+	}
+
 	function getProfile(data){
 		
 	console.log(JSON.stringify(data));
@@ -80,7 +86,8 @@ window.addEventListener('load', function() {
 	lvl = data["lvl"];
  	//$.jStorage.set('idSecretClient', data['idSecretClient']);
 	//$.jStorage.set('logAs', logAs);
-	$('#modal').hide();
+	
+	darkModalOff();
 	$JSView.goToView('menuTabs');
 	
 	//apagar spinner
@@ -158,14 +165,16 @@ function createUser(){
 
 	
 function logOut(){
+	darkModal();
 	$.post('http://52.20.73.216:8089/logout', {"logId" : logId}, function(data){
 	//$.jStorage.flush();
 	//try{navigator.splashscreen.show();}catch(e){}
 	//window.location.reload(true);
 	if(data["status"] == 200){
+	darkModalOff();
 	$JSView.goToView('viewLogin');
 	console.log("cerrando session");}
-	else{alert("Ha ocurrido un error cerrando la sesion");}
+	else{darkModalOff();alert("Ha ocurrido un error cerrando la sesion");}
 
 	});
 		
@@ -174,17 +183,19 @@ function logOut(){
 	function backView(){
 
 	$JSView.back();
+	
 
 
 	}
 
 	function darkModal(){
+	$('#modal').html('<i style="font-size: 68px; display: block; text-align: center; margin-top: 137px; color: white;" class="fa fa-circle-o-notch fa-spin"></i>');
 		$('#modal').show();
 	}
 
 
 function loginButton(){
-	$('#modal').show();
+	darkModal();
 	
 	var whirPass= $('.loginPage div label input').eq(1).val();
 	var email=$('.loginPage div label input').eq(0).val();
@@ -199,9 +210,9 @@ function loginButton(){
 	"pushKey":  typeof device !== 'undefined' ? "Browser" : "Browser"
 	},function(data){
 	if(data["status"] == 200){console.log("Autenticado Correctamente"); getProfile(data);}
-	else{$('#modal').hide();alert('Credenciales Invalidos, intente nuevamente');}	
-	}).fail(function(e) {$('#modal').hide();alert('error de conexion fail');});
-	}catch(e){$('#modal').hide();alert('error de conexion catch'+e);
+	else{ darkModalOff();alert('Credenciales Invalidos, intente nuevamente');}	
+	}).fail(function(e) { darkModalOff();alert('error de conexion fail');});
+	}catch(e){darkModalOff();alert('error de conexion catch'+e);
 	} 
 }
 

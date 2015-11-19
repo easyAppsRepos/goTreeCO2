@@ -136,7 +136,7 @@ margin-top: 14px;
 
 jsv-tab div #questContainer{
 
-background-color: #BEE6CE;
+
 border-top: solid white;
 }
 
@@ -172,6 +172,7 @@ background-color: #e5e5e5;
 position: absolute;
 background-size: cover;
 text-align: center;
+height: 100%;
 
 }
 
