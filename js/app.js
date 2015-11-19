@@ -145,7 +145,7 @@ function validateEmail(ss) {
 }
 
 function createUser(){
-	darkModal();
+	
 
 	var name=$('.createUs input').eq(0).val();
 	var email=$('.createUs input').eq(1).val();
@@ -165,17 +165,17 @@ function createUser(){
 
 	if(data["status"] == 200){
 		alert("Cuenta creada Exitosamente");
-		darkModalOff();
+		
 		$JSView.closeModal('modalA');
 	}else{
-	darkModalOff();
-	console.log('Ha ocurrido un error');
+	
+	alert('Ha ocurrido un error');
 	}	
 	}).fail(function(e) {
-	darkModalOff();
-	console.log('error de conexion fail');
+	
+	alert('error de conexion fail');
 	});
-	}catch(e){darkModalOff();alert("Ha ocurrido un error inesperado");}  
+	}catch(e){alert("Ha ocurrido un error inesperado");}  
 
 	}
 }
@@ -275,6 +275,8 @@ function depositoExitoso(tipoDep){
 	userExp=userExp+50;
 	calcularPorcentaje();
 	$JSView.controller.menuTabs('menuTabs');//eval controller jrCH
+	$v.select('#' + 'menuTabs' + ' jsv-tabs > jsv-tab.active').classList.remove('active');
+        $v.selectAll('jsv-tabs jsv-tab')[1].classList.add('active');
 	$v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
         $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[1].classList.add('active');
 }
