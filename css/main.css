@@ -9,6 +9,18 @@ line-height: 2;
 
 }
 
+#modal {
+position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: rgba(20,20,20,0.8);
+     z-index: 24;
+  
+  display: none;
+}
+
 .h1Rank{
 text-align: center; 
 color: rgb(7, 74, 50);

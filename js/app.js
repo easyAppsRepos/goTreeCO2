@@ -80,6 +80,7 @@ window.addEventListener('load', function() {
 	lvl = data["lvl"];
  	//$.jStorage.set('idSecretClient', data['idSecretClient']);
 	//$.jStorage.set('logAs', logAs);
+	$('#modal').hide();
 	$JSView.goToView('menuTabs');
 	
 	//apagar spinner
@@ -177,7 +178,13 @@ function logOut(){
 
 	}
 
+	function darkModal(){
+		$('#modal').show();
+	}
+
+
 function loginButton(){
+	$('#modal').show();
 	
 	var whirPass= $('.loginPage div label input').eq(1).val();
 	var email=$('.loginPage div label input').eq(0).val();
@@ -192,9 +199,9 @@ function loginButton(){
 	"pushKey":  typeof device !== 'undefined' ? "Browser" : "Browser"
 	},function(data){
 	if(data["status"] == 200){console.log("Autenticado Correctamente"); getProfile(data);}
-	else{alert('Credenciales Invalidos, intente nuevamente');}	
-	}).fail(function(e) {alert('error de conexion fail');});
-	}catch(e){alert('error de conexion catch'+e);
+	else{$('#modal').hide();alert('Credenciales Invalidos, intente nuevamente');}	
+	}).fail(function(e) {$('#modal').hide();alert('error de conexion fail');});
+	}catch(e){$('#modal').hide();alert('error de conexion catch'+e);
 	} 
 }
 
