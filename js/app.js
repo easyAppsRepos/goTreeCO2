@@ -3,7 +3,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-
+	enProceso=false;
 	var state = navigator.connection.type;
 	if (state == window.Connection.NONE)
 	{
@@ -169,6 +169,12 @@ function logOut(){
 	});
 		
 		}
+
+	function backView(){
+	if(!enProceso){
+	$JSView.back();	}
+
+	}
 
 function loginButton(){
 	
