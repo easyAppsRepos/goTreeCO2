@@ -22,8 +22,8 @@ function onDeviceReady(){
 	function onBackKeyDown() {
 	console.log("botonBack");
 	if(JSVActualView=='viewLogin'){navigator.app.exitApp();}
-	else if(JSVActualView=='viewB' || JSVActualView=='viewC'){
-		window.history.pushState('menuTabs', '', 'index.html#menuTabs'); 
+	else if(JSVActualView=='viewB' || JSVActualView=='viewC'){backView();
+		/*window.history.pushState('menuTabs', '', 'index.html#menuTabs'); 
 		var windowState = 'menuTabs';
 		$v.select('#' + JSVActualView).classList.add('JSVcontainerRight');
 		$v.select('#' + JSVActualView).classList.remove('JSVcontainerCenter');
@@ -31,7 +31,8 @@ function onDeviceReady(){
 		$v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
 		$v.select('#' + 'menuTabs').classList.add('JSVcontainerCenter');
 		$v.select('#' + 'menuTabs').classList.remove('JSVcontainerLeft');
-		JSVActualView ='menuTabs'; 
+		JSVActualView ='menuTabs'; */
+
 		}
 	else if(JSVActualView=='menuTabs'){navigator.app.exitApp();}
 	else if(JSVActualView=='modalA'){closeModal();}	
@@ -221,6 +222,7 @@ function logOut(){
 	function backView(){
 	console.log("backView9999");
 	$JSView.back();
+	$JSView.goToView('menuTabs');
 	
 
 
