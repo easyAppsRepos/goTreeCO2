@@ -209,8 +209,8 @@ $JSView = {
            console.log("window.history.state " + windowState);
            $JSView.returnTo(window.history.state);
 		//jrCH
-		$v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
-            $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
+		//$v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
+            //$v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
         },10);
         
     },

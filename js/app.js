@@ -21,7 +21,17 @@ function onDeviceReady(){
 	//onTouchEnd
 	function onBackKeyDown() {
 	if(JSVActualView=='viewLogin'){navigator.app.exitApp();}
-	if(JSVActualView=='viewA' || JSVActualView=='viewB'){alert("en viewA o B")}
+	if(JSVActualView=='viewA' || JSVActualView=='viewB'){
+		window.history.pushState('menuTabs', '', 'index.html#menuTabs'); 
+		var windowState = 'menuTabs';
+		$v.select('#' + JSVActualView).classList.add('JSVcontainerRight');
+		$v.select('#' + JSVActualView).classList.remove('JSVcontainerCenter');
+		$v.select('#' + 'menuTabs' + ' jsv-content > jsv-tab.active').classList.remove('active');
+		$v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[0].classList.add('active');
+		$v.select('#' + 'menuTabs').classList.add('JSVcontainerCenter');
+		$v.select('#' + 'menuTabs').classList.remove('JSVcontainerLeft');
+		JSVActualView ='menuTabs'; 
+		}
 	}
 
 
