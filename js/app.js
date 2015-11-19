@@ -20,8 +20,9 @@ function onDeviceReady(){
 }
 	//onTouchEnd
 	function onBackKeyDown() {
+	console.log("botonBack");
 	if(JSVActualView=='viewLogin'){navigator.app.exitApp();}
-	if(JSVActualView=='viewA' || JSVActualView=='viewC'){
+	else if(JSVActualView=='viewB' || JSVActualView=='viewC'){
 		window.history.pushState('menuTabs', '', 'index.html#menuTabs'); 
 		var windowState = 'menuTabs';
 		$v.select('#' + JSVActualView).classList.add('JSVcontainerRight');
@@ -32,9 +33,9 @@ function onDeviceReady(){
 		$v.select('#' + 'menuTabs').classList.remove('JSVcontainerLeft');
 		JSVActualView ='menuTabs'; 
 		}
-	if(JSVActualView=='menuTabs'){navigator.app.exitApp();}
-	if(JSVActualView=='modalA'){closeModal();}	
-	}
+	else if(JSVActualView=='menuTabs'){navigator.app.exitApp();}
+	else if(JSVActualView=='modalA'){closeModal();}	
+	} 
 
 
 window.addEventListener('load', function() {
@@ -218,7 +219,7 @@ function logOut(){
 		}
 
 	function backView(){
-
+	console.log("backView9999");
 	$JSView.back();
 	
 
