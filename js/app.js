@@ -90,8 +90,9 @@ window.addEventListener('load', function() {
 
 
 	function darkModalOff(){
-		$('#modal').hide();
 		$('#modal').html('');
+		$('#modal').hide();
+	
 	}
 
 	function cerrarNoti(){
@@ -338,7 +339,12 @@ function cargarRanking(){
 	} 
 
 }
+	function abrirMenu(){
+	
+		darkModal();
+				$('#modal').html('<div class="containerComprar"><button>Sobre MindCO2</button><button>Configuracion</button><button>Preguntas frecuentes</button><button onClick="logOut()">Cerrar sesion</button></div>');
 
+	}
 	function hacerMision(){alert("Las misiones no estan habilitadas en esta version :'c");}
 
 	function calcularPorcentaje(){

@@ -1,6 +1,6 @@
 <jsv-header style="color: white; font-size: 23px;" class="jsv-no-border bgTreeco">  
 
-	<i id='iconMainMenu' class="fa fa-bars"></i>	
+	<i id='iconMainMenu' onClick="abrirMenu()" class="fa fa-bars"></i>	
 	<a id='tituloTab'>Premios</a>
 
 </jsv-header>
@@ -26,12 +26,12 @@
 			
 			<div class='page1Items'>
 				<img src='img/iconosGame/medal2.png'>
-				<a>Logros</a><a>1/7</a>
+				<a>Logros</a><a>2/5</a>
 				<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewB')">Ver logros</button>
 			</div>
 			<div class='page1Items'>
 				<img src='img/iconosGame/coin.png'>
-				<a>Puntos</a><a>100</a>
+				<a>Puntos</a><a>{{userPts}}</a>
 				<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewC')">Canjear Puntos</button>
 			</div>
 			<div class='page1Items'>
