@@ -22,12 +22,24 @@
 <jsv-content class="has-tabs">
 
 	<jsv-tab class="active bgWhite">
-
-		<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewB')">Ver logros</button>
-		<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewC')">Canjear mis puntos</button>'
-		 
-		<button class="bgYellow" onClick="logOut()">Open Modal dark</button>
-
+		<div style="position: absolute; width: 100%;">     
+			
+			<div class='page1Items'>
+				<img src='img/iconosGame/medal2.png'>
+				<a>Logros</a><a>1/7</a>
+				<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewB')">Ver logros</button>
+			</div>
+			<div class='page1Items'>
+				<img src='img/iconosGame/coin.png'>
+				<a>Puntos</a><a>100</a>
+				<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewC')">Canjear Puntos</button>
+			</div>
+			<div class='page1Items'>
+				<img src='img/iconosGame/logro3.png'>
+				<a>Misiones</a><a>0/10</a>
+				<button style="margin-top: 20px;" class="bgYellow" onClick="hacerMision()">Hacer Mision</button>'
+			</div>			
+		</div>
 	</jsv-tab>
 
 	<jsv-tab class="bgWhite">

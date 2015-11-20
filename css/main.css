@@ -39,6 +39,27 @@ line-height: 1;
 .item p{
 margin-left: 61px !important;
 }
+.page1Items img{
+
+}
+.page1Items{
+margin-top: 17px;
+font-size: 19px;
+color: #074A32;
+}
+.page1Items button{}
+.page1Items a:nth-child(2){
+padding-left: 13px;
+position: absolute;
+padding-top: 20px;
+}
+.page1Items a:nth-child(3){
+position: absolute;
+padding-top: 20px;
+right: 0px;
+padding-right: 40px;
+font-weight: initial;
+}
 .item p b{
 font-size: 17px;
 }

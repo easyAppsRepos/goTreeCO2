@@ -339,7 +339,7 @@ function cargarRanking(){
 
 }
 
-
+	function hacerMision(){alert("Las misiones no estan habilitadas en esta version :'c");}
 
 	function calcularPorcentaje(){
 		var maxP = lvl==1 ? 200 : lvl==2 ? 400 : lvl==3 ? 650 : 0;
