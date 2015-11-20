@@ -236,11 +236,24 @@ function logOut(){
 		$('#modal').show();
 	}
 
+function fbStatus(){
+ openFB.getLoginStatus( function(response) {
+     if(response.status === 'connected') {
+        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+	console.log(response);
+                    } else {
+                       // alert('Facebook login failed: ' + response.error);
+			 alert('Sesion no iniciada en facebook: ' + response.error);
+                    }
+                }); 
+}
+
+
 	function loginFace(){
 	        openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
-                        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                        alert('Sesion Iniciada: ' + response.authResponse.accessToken);
 			console.log(response);
                     } else {
                         alert('Facebook login failed: ' + response.error);
