@@ -19,14 +19,15 @@
   
     <preference name="orientation" value="portrait" />
 
-
+981288545270222
 
    <gap:plugin name="phonegap-plugin-barcodescanner" source="npm"/>
    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-device" source="npm" version="1.0.1" />
    <gap:plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
-     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0"/>
+ 
+
 
 
    <access origin="*" subdomains="true" />

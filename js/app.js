@@ -3,6 +3,8 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
+	
+	 openFB.init({appId: '981288545270222'});
 
 	 document.addEventListener("backbutton", onBackKeyDown, false);
 	enProceso=false;
@@ -232,6 +234,18 @@ function logOut(){
 	function darkModal(){
 	$('#modal').html('<i style="font-size: 68px; display: block; text-align: center; margin-top: 137px; color: white;" class="fa fa-circle-o-notch fa-spin"></i>');
 		$('#modal').show();
+	}
+
+	function loginFace(){
+	        openFB.login(
+                function(response) {
+                    if(response.status === 'connected') {
+                        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+			console.log(response);
+                    } else {
+                        alert('Facebook login failed: ' + response.error);
+                    }
+                }, {scope: 'email,read_stream,publish_actions'});
 	}
 
 
