@@ -303,22 +303,31 @@ function depositoExitoso(tipoDep){
         $v.selectAll('#' + 'menuTabs' + ' jsv-content > jsv-tab')[1].classList.add('active');
 }
 
+/*
+<jsv-item class="item" style="background-color:aliceblue">
+  <div class="photo"><img src="img/user.png"></div>
+  <h3>h</h3>
+  <text><h3>EXP ganada: 200</h3></text>
+  <img src='img/iconosGame/1.png'>
+</jsv-item>
+
+*/
 
 
 function cargarRanking(){
 	 refreshRank();
 
-	var rank ='';
+	var rank ='<jsv-list class="photo-list">';
 
 	try{
 	$.post('http://52.20.73.216:8089/getRanking',{"s":"s"},function(data){
 	if(data["status"] == 200){console.log(data['data'][0].nombre);
 			for(i=0;i<data["data"].length;i++){
 	i%2==0?color="background-color:aliceblue":color="";
-	rank=rank+'<jsv-list class="photo-list"><jsv-item class="item" style="'+color+'"'+'><div class="photo"><img src="img/iconosGame/'+(i+1)+".png"+'"></div><h3>'+data['data'][i].nombre+'</h3><text><h3>EXP ganada: '+data['data'][i].cantExp+'</h3></text></jsv-item>';
-
+	rank=rank+'<jsv-item class="item" style="'+color+'"'+'><div class="photo"><img src="img/user.png"></div><h3>'+data['data'][i].nombre+'</h3><text><h3>EXP ganada: '+data['data'][i].cantExp+'</h3></text><img class="numberRank" src="img/iconosGame/'+(i+1)+".png"+'"></jsv-item>';
+	
 	}
-
+		rank=rank+'</jsv-list>';
 		$("#ranking").html(rank); 
 	console.log(rank);
 
