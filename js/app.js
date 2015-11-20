@@ -245,7 +245,7 @@ function logOut(){
                     } else {
                         alert('Facebook login failed: ' + response.error);
                     }
-                }, {scope: 'email'});
+                }, {scope: 'public_profile,email,user_friends'});
 	}
 
 
