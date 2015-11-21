@@ -239,8 +239,10 @@ function logOut(){
 	function fbStatus(){
 	 openFB.getLoginStatus( function(response) {
 	     if(response.status === 'connected') {
-		alert('Facebook token: ' + response.authResponse.accessToken);
-		console.log(response);
+		
+		
+		//alert('Facebook token: ' + response.authResponse.accessToken);
+		//console.log(response);
 		            } else {
 		               // alert('Facebook login failed: ' + response.error);
 				 alert('Sesion no iniciada en facebook: ' + response.error);
@@ -253,8 +255,9 @@ function logOut(){
         openFB.api({
             path: '/me',
             success: function(data) {
-		console.log("name:"+data.name+" pic: "+'http://graph.facebook.com/' + data.id + '/picture?type=small');
-                console.log(JSON.stringify(data));
+		nameFace=data.name;
+		idFace=data.id;
+		loginWithFace();
                 //document.getElementById("userName").innerHTML = data.name;
                 //document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
             },
@@ -268,15 +271,40 @@ function logOut(){
                     if(response.status === 'connected') {
                         //alert('Sesion Iniciada: ' + response.authResponse.accessToken);
 			$.jStorage.set("fbToken", response.authResponse.accessToken);
+			
 			console.log(response);
+			getInfo();
                     } else {
                         alert('Facebook login failed: ' + response.error);
                     }
                 }, {scope: 'public_profile,email,user_friends'});
 	}
-	    function errorHandler(error) {
+	   
+
+ function errorHandler(error) {
         alert(error.message);
     }
+
+	function loginWithFace(){
+
+		darkModal();	
+		try{
+		$.post('http://52.20.73.216:8089/loginFace',{
+		"idFace" : idFace,
+		"nombre" : nameFace,
+		"phone": typeof device !== 'undefined' ? device.model : "Browser",
+		"os": typeof device !== 'undefined' ? device.platform : "Browser",
+		"uuid":  typeof device !== 'undefined' ? device.uuid : "Browser",
+		"pushKey":  typeof device !== 'undefined' ? "Browser" : "Browser"
+		},function(data){
+		if(data["status"] == 200){console.log("Autenticado Correctamente"); getProfile(data);}
+		else{ darkModalOff();alert('Credenciales Invalidos, intente nuevamente');}	
+		}).fail(function(e) { darkModalOff();alert('error de conexion fail');});
+		}catch(e){darkModalOff();alert('error de conexion catch'+e);
+		} 
+
+
+}
 
 function loginButton(){
 	darkModal();
