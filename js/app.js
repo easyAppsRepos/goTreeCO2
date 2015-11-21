@@ -205,17 +205,27 @@ function createUser(){
 }
 
 
+
 	
 function logOut(){
 	darkModal();
 	$.post('http://52.20.73.216:8089/logout', {"logId" : logId}, function(data){
-	//$.jStorage.flush();
+	if(idFace){
+	console.log("con id face");
+	logoutFace();}
+	else{
+	console.log("sin id face");
+	}
+	
+	
 	//try{navigator.splashscreen.show();}catch(e){}
 	//window.location.reload(true);
 	if(data["status"] == 200){
 	darkModalOff();
 	$JSView.goToView('viewLogin');
-	console.log("cerrando session");}
+	console.log("cerrando session");
+	$.jStorage.flush();
+}
 	else{darkModalOff();alert("Ha ocurrido un error cerrando la sesion");}
 
 	});
@@ -440,3 +450,11 @@ function cargarRanking(){
 	$JSView.openModal('modalA');
 	}
 
+
+	    function logoutFace() {
+        openFB.logout(
+                function() {
+                    alert('Logout successful');
+                },
+                errorHandler);
+    }

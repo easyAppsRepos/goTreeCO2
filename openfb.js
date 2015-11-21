@@ -91,7 +91,7 @@ var openFB = (function () {
      * @param callback the function that receives the loginstatus
      */
     function getLoginStatus(callback) {
-	var token = $.jStorage.get('fbToken');
+	 token = $.jStorage.get('fbToken');
         //var token = tokenStore.fbAccessToken,
             loginStatus = {};
         if (token) {
@@ -202,7 +202,7 @@ var openFB = (function () {
      */
     function logout(callback) {
         var logoutWindow,
-            token = tokenStore.fbAccessToken;
+           token = $.jStorage.get('fbToken');//jrCh
 
         /* Remove token. Will fail silently if does not exist */
         tokenStore.removeItem('fbtoken');
