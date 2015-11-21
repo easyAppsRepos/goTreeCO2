@@ -273,7 +273,9 @@ function fbStatus(){
                     }
                 }, {scope: 'public_profile,email,user_friends'});
 	}
-
+	    function errorHandler(error) {
+        alert(error.message);
+    }
 
 function loginButton(){
 	darkModal();
