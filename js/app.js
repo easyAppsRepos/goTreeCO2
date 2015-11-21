@@ -236,17 +236,17 @@ function logOut(){
 		$('#modal').show();
 	}
 
-function fbStatus(){
- openFB.getLoginStatus( function(response) {
-     if(response.status === 'connected') {
-        alert('Facebook token: ' + response.authResponse.accessToken);
-	console.log(response);
-                    } else {
-                       // alert('Facebook login failed: ' + response.error);
-			 alert('Sesion no iniciada en facebook: ' + response.error);
-                    }
-                }); 
-}
+	function fbStatus(){
+	 openFB.getLoginStatus( function(response) {
+	     if(response.status === 'connected') {
+		alert('Facebook token: ' + response.authResponse.accessToken);
+		console.log(response);
+		            } else {
+		               // alert('Facebook login failed: ' + response.error);
+				 alert('Sesion no iniciada en facebook: ' + response.error);
+		            }
+		        }); 
+	}
 
 
 	function getInfo() {
@@ -266,7 +266,8 @@ function fbStatus(){
 	        openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
-                        alert('Sesion Iniciada: ' + response.authResponse.accessToken);
+                        //alert('Sesion Iniciada: ' + response.authResponse.accessToken);
+			$.jStorage.set("fbToken", response.authResponse.accessToken);
 			console.log(response);
                     } else {
                         alert('Facebook login failed: ' + response.error);

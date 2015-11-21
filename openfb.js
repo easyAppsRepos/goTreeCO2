@@ -91,7 +91,8 @@ var openFB = (function () {
      * @param callback the function that receives the loginstatus
      */
     function getLoginStatus(callback) {
-        var token = tokenStore.fbAccessToken,
+	var token = $.jStorage.get('fbToken');
+        //var token = tokenStore.fbAccessToken,
             loginStatus = {};
         if (token) {
             loginStatus.status = 'connected';
