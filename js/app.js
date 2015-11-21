@@ -249,6 +249,19 @@ function fbStatus(){
 }
 
 
+	function getInfo() {
+        openFB.api({
+            path: '/me',
+            success: function(data) {
+		console.log("name:"+data.name+" pic: "+'http://graph.facebook.com/' + data.id + '/picture?type=small');
+                console.log(JSON.stringify(data));
+                //document.getElementById("userName").innerHTML = data.name;
+                //document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
+            },
+            error: errorHandler});
+    }
+
+
 	function loginFace(){
 	        openFB.login(
                 function(response) {
