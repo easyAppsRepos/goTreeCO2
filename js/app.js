@@ -239,7 +239,7 @@ function logOut(){
 function fbStatus(){
  openFB.getLoginStatus( function(response) {
      if(response.status === 'connected') {
-        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+        alert('Facebook token: ' + response.authResponse.accessToken);
 	console.log(response);
                     } else {
                        // alert('Facebook login failed: ' + response.error);
