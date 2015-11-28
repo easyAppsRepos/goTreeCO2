@@ -4,15 +4,39 @@
     Canjea tus Puntos
     <button-header-right></button-header-right>
 </jsv-header>
-<jsv-content style='background-color: #E5E5E5;'>
+
+<div style="width: 90%; margin-top: 76px; z-index: 2; margin-left: 5%; position: fixed; top: 0px; height: 44px;">
+	        <div>
+<div style="position: absolute; background-color: white; width: 38%; height: 100%; border-radius: 8px;">
+	<div style="top: 0px; margin-top: 3px;" class="imgLogro">
+		<img style="height: 35px;" src="img/iconosGame/coin.png">
+		  <p class='pPoint'><b>400</b></p>
+	 </div>	
+</div>
+<div style="position: absolute; background-color: white; height: 100%; border-radius: 8px; width: 38%; right: 0px;">
+	<div style="top: 0px; margin-top: 3px; right: 0px; margin-right: 40%;" class="imgLogro">
+		<img style="height: 35px;" src="img/diamond.png">
+		  <p class='pPointB'><b>4</b></p>
+          </div>
+</div>
+   
+           
+        </div>	
+	</div>
+
+<jsv-content style="background-color: #E5E5E5; margin-top:67px;">
     <!--   <h1 class="paddingFull10">Content View B</h1>
     <button class="bgYellow" onClick="$JSView.goToView('viewC')">Go to view C</button>
     -->
 
 
-    <jsv-list class="card-list">
+
+    <jsv-list class="card-list" >
 	 <jsv-list class="card-list">
  
+
+
+
         <jsv-item class="item">
 	<div class="imgLogro"><img src='img/iconosGame/arbol.png'></div>
             <p><b>Siembra un Arbol</b> </br>Siembra un arbol en la reserva Natural Cloudbridge</p>
@@ -33,6 +57,28 @@
             </div>
         </jsv-item>
 
+
+	 <jsv-item class="item">
+	<div class="imgLogro"><img src='img/iconosGame/sim.png'></div>
+            <p><b>Recarga Movistar!</b> </br>Recarga 500 colones en tu cuenta Movistar</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo: 300 puntos</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
+
+ <jsv-item class="item">
+	<div class="imgLogro"><img src='img/iconosGame/sim.png'></div>
+            <p><b>Recarga Movistar!</b> </br>Recarga 500 colones en tu cuenta Movistar</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo: 300 puntos</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
         <jsv-item class="item">
 	<div class="imgLogro"><img src='img/iconosGame/sim.png'></div>
             <p><b>Recarga Kolbi</b> </br>Recarga 500 colones en tu cuenta Movistar</p>
@@ -43,7 +89,7 @@
             </div>
         </jsv-item>
 
-        
+</div>        
     </jsv-list>
 </jsv-content>
 
