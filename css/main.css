@@ -26,7 +26,22 @@ text-align: center;
 color: rgb(7, 74, 50);
 }
 
+.logrosItem{
+height: 90px;
+width: 24%;
+text-align: center;
+position: relative;
+margin-top: 20px;
+display: inline-block;
+}
 
+.logrosItem span{
+position: absolute;
+left: 0px;
+width: 100%;
+top: 54px;
+
+}
 .bloqueado{
 opacity: 0.8;
 background-color: lightgray;
@@ -43,9 +58,10 @@ margin-left: 61px !important;
 
 }
 .page1Items{
-margin-top: 17px;
-font-size: 19px;
-color: #074A32;
+    margin-top: 6px;
+    font-size: 19px;
+    color: #074A32;
+    border-bottom: solid 2px #F2F2F2;
 }
 .page1Items button{}
 .page1Items a:nth-child(2){
@@ -166,6 +182,33 @@ border: none;
 font-size: 20px;
 
 }
+.rewardTab{
+top: -1000px;
+position: absolute;
+width: 100%;
+}
+.rewardTab.activa{
+top:48px;
+
+}
+
+.tabTab{
+    height: 31px;
+    width: 30%;
+    border-bottom: 2px solid #074A32;
+    margin-top: 9px;
+    position: absolute;
+    top: 0px;
+    border-top: 2px solid #074A32;
+    border-left: 2px solid #074A32;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    font-weight: initial;
+    font-size: 13px;
+	background-color: #0C8F62;
+}
+}
 .loginPage div{
 margin-top: 52px;
 width: 76%;
@@ -199,6 +242,15 @@ jsv-tab div #questContainer{
 border-top: solid white;
 }
 
+.globalTab.activa {
+    top: 48px;
+}
+.globalTab {
+    top: -1000px;
+    position: absolute;
+    width: 100%;
+}
+
 jsv-tab div #questContainer img{
 
 margin-top: 10px;
@@ -206,7 +258,7 @@ margin-top: 10px;
 jsv-tab div #questContainer #questButton{
 height: 38px;
 width: 48%;
-background-color: #0C8F62;
+background-color: #289F75;
 margin-left: 26%;
 position: absolute;
 border-radius: 7px;
@@ -221,6 +273,11 @@ margin-top: 12px;
 list-style: none inside none;
 padding: 0 !important;
 margin-left: 9px;
+}
+.pulsado{
+background-color: white;
+color: #289F75;
+font-weight: bold;
 }
 
 .divProfileInfo{

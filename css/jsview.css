@@ -132,7 +132,7 @@ color: #074A32;
 
 } 
 .bgTreeco{
-background-color: #0C8F62
+background-color: #289F75
 
 }
 
@@ -221,7 +221,7 @@ jsv-tabs jsv-tab{
 }
 jsv-tabs jsv-tab.active i{color: white !important;}
 jsv-tabs jsv-tab.active{
-    border-bottom: 3px solid #ccc}
+    border-bottom: 3px solid #FFF}
     
 jsv-tabs {
     position: absolute;
@@ -530,7 +530,7 @@ jsv-list.card-list jsv-item .tools{
 jsv-list.card-list jsv-item .tools .col{
 font-size: 13px;
 padding-left: 0px;
-color: #0C8F62;    
+color: #289F75;    
 }
 
 /*Chat room*/

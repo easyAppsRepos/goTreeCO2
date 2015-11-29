@@ -1,3 +1,4 @@
+<!-- 
 <jsv-header style="color: white; font-size: 23px;" class="jsv-no-border bgTreeco">  
 
 	<i id='iconMainMenu' onClick="abrirMenu()" class="fa fa-bars"></i>	
@@ -5,7 +6,37 @@
 
 </jsv-header>
 
-<jsv-tabs class="bgTreeco">
+
+<div class='page1Items'>
+					<img src='img/iconosGame/medal2.png'>
+					<a>Logros</a><a>2/5</a>
+					<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewB')">Ver logros</button>
+				</div>
+				<div class='page1Items'>
+					<img src='img/iconosGame/coin.png'>
+					<a>Puntos</a><a>{{userPts}}</a>
+					<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewC')">Canjear Puntos</button>
+				</div>
+				<div class='page1Items'>
+					<img src='img/iconosGame/logro3.png'>
+					<a>Misiones</a><a>0/10</a>
+					<button style="margin-top: 20px;" class="bgYellow" onClick="hacerMision()">Hacer Mision</button>'
+				</div>	
+
+	<div style="height: 100%; width: 100%; position: absolute;background-color: #E5E5E5;">
+			<img style="position: absolute; margin-left: 11px; margin-top: 8px;" src="img/iconosGame/Leaderboard.png">
+			<h2 class="paddingFull10 h1Rank">Top 9</h2>
+
+			<div id='ranking'>	
+					
+				
+				
+			</div>
+		</div>
+-->
+
+
+<jsv-tabs class="bgTreeco" style='top:0px'>
 
 	<jsv-tab class="active">
 		<i style="color: #074A32;" class="fa fa-trophy"></i>
@@ -16,29 +47,141 @@
 	<jsv-tab>
 		<i style="color: #074A32;" class="fa fa-globe"></i>
 	</jsv-tab>
+	<jsv-tab>
+		<i style="color: #074A32;" class="fa fa-cogs"></i>
+	</jsv-tab>
 
 </jsv-tabs>
 
-<jsv-content class="has-tabs">
+
+
+<jsv-content class="has-tabs" style='top: 44px;'>
 
 	<jsv-tab class="active bgWhite">
+
+		
+
 		<div style="position: absolute; width: 100%;">     
-			
-			<div class='page1Items'>
-				<img src='img/iconosGame/medal2.png'>
-				<a>Logros</a><a>2/5</a>
-				<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewB')">Ver logros</button>
-			</div>
-			<div class='page1Items'>
-				<img src='img/iconosGame/coin.png'>
-				<a>Puntos</a><a>{{userPts}}</a>
-				<button style="margin-top: 20px;" class="bgYellow" onClick="$JSView.goToView('viewC')">Canjear Puntos</button>
-			</div>
-			<div class='page1Items'>
-				<img src='img/iconosGame/logro3.png'>
-				<a>Misiones</a><a>0/10</a>
-				<button style="margin-top: 20px;" class="bgYellow" onClick="hacerMision()">Hacer Mision</button>'
-			</div>			
+			<section style="height:45px;">
+  				 <div id="menu" style="  height: 48px; display: block; background: none repeat scroll 0% 0% #289F75; opacity: 1; width: 100%; left: 0px;">
+
+					<div  id='1' style="margin-left: 5%; border-top-left-radius: 8px; border-bottom-left-radius: 8px;" class="tabTab pulsado">
+					LOGROS
+					</div>
+					<div style="margin-left: 35%;" class="tabTab"  id='2'>
+					PREMIOS
+					</div>
+					<div  id='3' style="margin-left: 65%; border-right: 2px solid rgb(7, 74, 50); border-bottom-right-radius: 8px; border-top-right-radius: 8px;" class="tabTab">
+					MISIONES
+					</div>
+				</div>
+			</section>
+			<div class="rewardTab activa" id='1'>
+				<div class='page1Items'>
+					<img src='img/iconosGame/medal2.png'>
+					<a>Logros</a><a>2/5</a>
+					
+				</div>
+				<div style="position: absolute; width: 100%;">
+					<div class='logrosItem'>
+						<img src='img/iconosGame/logro2.png'>
+						<span>Primer deposito</span>
+					</div>
+					<div class='logrosItem'>
+						<img src='img/iconosGame/sim.png'>
+						<span>Hat-Trick</span>
+					</div>
+					<div class='logrosItem'>
+						<img src='img/iconosGame/sim.png'>
+						<span>Hat-Trick</span>
+					</div>
+					<div class='logrosItem'>
+						<img src='img/iconosGame/sim.png'>
+						<span>Hat-Trick</span>
+					</div>
+					<div class='logrosItem'>
+						<img src='img/iconosGame/sim.png'>
+						<span>Hat-Trick</span>
+					</div>
+					<div class='logrosItem'>
+						<img src='img/iconosGame/sim.png'>
+						<span>Hat-Trick</span>
+					</div>
+					<div class='logrosItem'>
+						<img src='img/iconosGame/sim.png'>
+						<span>Hat-Trick</span>
+					</div>
+				</div>
+			</div>	
+			<div class="rewardTab" id="2">
+	
+	<div class="page1Items">
+					<img src="img/iconosGame/coin.png">
+					<a>Puntos Canjeables</a><a>200</a>
+					
+				</div>
+
+    <jsv-list class="card-list">
+	 <jsv-list class="card-list">
+ 
+
+
+
+        <jsv-item class="item">
+	<div class="imgLogro"><img src="img/iconosGame/arbol.png"></div>
+            <p><b>Siembra un Arbol</b> <br>Siembra un arbol en la reserva Natural Cloudbridge</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo: 150pts</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
+        <jsv-item class="item">
+	<div class="imgLogro"><img src="img/iconosGame/sim.png"></div>
+            <p><b>Recarga Movistar!</b> <br>Recarga 500 colones en tu cuenta Movistar</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo: 300 puntos</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
+
+	 <jsv-item class="item">
+	<div class="imgLogro"><img src="img/iconosGame/sim.png"></div>
+            <p><b>Recarga Movistar!</b> <br>Recarga 500 colones en tu cuenta Movistar</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo: 300 puntos</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
+
+ <jsv-item class="item">
+	<div class="imgLogro"><img src="img/iconosGame/sim.png"></div>
+            <p><b>Recarga Movistar!</b> <br>Recarga 500 colones en tu cuenta Movistar</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo: 300 puntos</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
+        <jsv-item class="item">
+	<div class="imgLogro"><img src="img/iconosGame/sim.png"></div>
+            <p><b>Recarga Kolbi</b> <br>Recarga 500 colones en tu cuenta Movistar</p>
+            <div class="tools row">
+                <div class="col premioCosto">Costo 350 puntos</div>
+                <div style="text-align: right;" class="col botonComprar">Comprar</div>
+
+            </div>
+        </jsv-item>
+
+</jsv-list></jsv-list></div>
+			<div class="rewardTab"  id='3'>misiones
+			</div>	
 		</div>
 	</jsv-tab>
 
@@ -67,14 +210,35 @@
 
 	<jsv-tab class="bgWhite">
 		<div style="height: 100%; width: 100%; position: absolute;background-color: #E5E5E5;">
-			<img style="position: absolute; margin-left: 11px; margin-top: 8px;" src="img/iconosGame/Leaderboard.png">
-			<h2 class="paddingFull10 h1Rank">Top 9</h2>
+			<section style="height:45px;">
+  				 <div id="menuGlobal" style="  height: 48px; display: block; background: none repeat scroll 0% 0% #289F75; opacity: 1; width: 100%; left: 0px;">
 
-			<div id='ranking'>	
+					<div  id='4' style="width: 37%;margin-left: 5%; border-top-left-radius: 8px; border-bottom-left-radius: 8px;" class="tabTab pulsado">
+					MUNDIAL
+					</div>
+					<div style="width: 37%; margin-left: 42%; border-bottom-right-radius: 8px; border-top-right-radius: 8px; border-right: 2px solid rgb(7, 74, 50);" class="tabTab" id="5">
+					AMIGOS
+					</div>
+
+				</div>
+			</section>
+			<div class='globalTab activa' id='4'>
+							<img style="position: absolute; margin-left: 11px; margin-top: 8px;" src="img/iconosGame/Leaderboard.png">
+							<h2 class="paddingFull10 h1Rank">Top 9</h2>
+
+							<div id='ranking'>	
 					
 				
 				
+							</div>
 			</div>
+			<div class='globalTab' id='5'>2</div>
+		</div>
+	</jsv-tab>
+
+		<jsv-tab class="bgWhite">
+		<div style="height: 100%; width: 100%; position: absolute;background-color: #E5E5E5;">
+			Configuracion...
 		</div>
 	</jsv-tab>
 

@@ -344,10 +344,58 @@ $JSView = {
     },
     //This function start the tabs
     initTabs: function(e, options){
+
+
+//JRCH
+for (var i = 0; i <  $v.selectAll('#menuGlobal div').length; ++i) {
+
+           $v.selectAll('#menuGlobal div')[i].addEventListener('click', function() { 
+             console.log(this);
+
+                $v.select('#menuGlobal > div.pulsado').classList.remove('pulsado');
+                this.classList.add('pulsado');
+               
+                //Active jsv-content of asigned jsv-tab
+		
+                litems=$v.selectAll('.globalTab'); 
+                for (i=0;i<litems.length;i++){ 
+                    if (litems.item(i).id==this.id){ 
+                        $v.select('.globalTab.activa').classList.remove('activa');
+                        $v.selectAll('.globalTab')[i].classList.add('activa');
+
+
+                    } 
+		  }
+                },false);}
+
+
+   for (var i = 0; i <  $v.selectAll('#menu div').length; ++i) {
+
+           $v.selectAll('#menu div')[i].addEventListener('click', function() { 
+             console.log(this);
+
+                $v.select('#menu > div.pulsado').classList.remove('pulsado');
+                this.classList.add('pulsado');
+               
+                //Active jsv-content of asigned jsv-tab
+		
+                litems=$v.selectAll('.rewardTab'); 
+                for (i=0;i<litems.length;i++){ 
+                    if (litems.item(i).id==this.id){ 
+                        $v.select('.rewardTab.activa').classList.remove('activa');
+                        $v.selectAll('.rewardTab')[i].classList.add('activa');
+
+
+                    } 
+		  }
+                },false);}
+
+//JRCH
+
 	console.log("en initTabs");
         for (var i = 0; i < $v.selectAll('jsv-tabs jsv-tab').length; ++i) {
             $v.selectAll('jsv-tabs jsv-tab')[i].addEventListener('click', function() { 
-                
+                   
                 //Active the tab touched
                 $v.select('#' + e + ' jsv-tabs > jsv-tab.active').classList.remove('active');
                 this.classList.add('active');
