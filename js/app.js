@@ -6,7 +6,7 @@ function onDeviceReady(){
 	
 	 openFB.init({appId: '981288545270222'});
 //FFFFFFFFFFFFFFFFFFF
-
+/*
 var mypos = $('#2').offset().top;
 var up = false;
 var newscroll;
@@ -26,7 +26,7 @@ var newscroll;
     mypos = newscroll;
 
 ;}, false);
-
+*/
 
 //ffffffffffffffffff
 	 document.addEventListener("backbutton", onBackKeyDown, false);
