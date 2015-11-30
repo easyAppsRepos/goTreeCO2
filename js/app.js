@@ -6,7 +6,7 @@ function onDeviceReady(){
 	pV=true;
 	offSet=0;
 	 openFB.init({appId: '981288545270222'});
-
+subiendo=false;
 
 $("*").scrollstart(function(ev){
 
@@ -16,7 +16,7 @@ $("*").scrollstart(function(ev){
 		offSet=$('#2').offset().top;
 		//console.log("en scroll");
 		if($('#2').offset().top<-68){
-			if(pV){
+			if(pV && !subiendo){
 			$('#puntosXD').animate({marginTop: "0px"}, 500);
 			pV=false;
 			
@@ -28,13 +28,15 @@ $("*").scrollstart(function(ev){
 		if(antOffSet<offSet && !pV){
 			$('#puntosXD').animate({marginTop: "-75px"}, 500);
 			pV=true;
+			subiendo=true;
 			
 		}
+		if(antOffSet>offSet && pV){subiendo=false;}
 	}
 
 });
 
-$("*").scrollend(function(ev){console.log("scrollEND"+$('#2').offset().top);});
+
 //FFFFFFFFFFFFFFFFFFF
 /*
 var mypos = $('#2').offset().top;
