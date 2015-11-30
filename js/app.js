@@ -11,10 +11,10 @@ function onDeviceReady(){
 $("*").scrollstart(function(ev){
 
 	if($("#2").hasClass( "pulsado" )){//
-		console.log('offset: '+$('#2').offset().top);
+		console.log('scrollSTART: '+$('#2').offset().top);
 		antOffSet=offSet;
 		offSet=$('#2').offset().top;
-		console.log("en scroll");
+		//console.log("en scroll");
 		if($('#2').offset().top<-68){
 			if(pV){
 			$('#puntosXD').animate({marginTop: "0px"}, 500);
@@ -25,7 +25,7 @@ $("*").scrollstart(function(ev){
 
 		}
 
-		if(antOffSet>offSet && !pV){
+		if(antOffSet<offSet && !pV){
 			$('#puntosXD').animate({marginTop: "-75px"}, 500);
 			pV=true;
 			
@@ -34,7 +34,7 @@ $("*").scrollstart(function(ev){
 
 });
 
-
+$("*").scrollend(function(ev){console.log("scrollEND"+$('#2').offset().top);)});
 //FFFFFFFFFFFFFFFFFFF
 /*
 var mypos = $('#2').offset().top;
