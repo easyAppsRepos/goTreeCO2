@@ -6,6 +6,8 @@ function onDeviceReady(){
 	
 	 openFB.init({appId: '981288545270222'});
 
+	document.addEventListener("touchmove", function(){console.log("sssff");}, false);
+
 	 document.addEventListener("backbutton", onBackKeyDown, false);
 	enProceso=false;
 	var state = navigator.connection.type;
@@ -430,12 +432,13 @@ function cargarRanking(){
 
 
 
-	//jrCH
+	/*
 $("*").scrollstart(function(ev){
 	console.log("tttt" );
 });
+*/
 
-
+	
 
    function refreshRank(){
         console.log('refreshRank');
