@@ -34,7 +34,7 @@ $("*").scrollstart(function(ev){
 
 });
 
-$("*").scrollend(function(ev){console.log("scrollEND"+$('#2').offset().top);)});
+$("*").scrollend(function(ev){console.log("scrollEND"+$('#2').offset().top);});
 //FFFFFFFFFFFFFFFFFFF
 /*
 var mypos = $('#2').offset().top;
