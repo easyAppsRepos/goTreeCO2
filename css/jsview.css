@@ -199,12 +199,11 @@ jsv-header button-header-left{
 /*Tabs*/
 
 .botonComprar{
-text-align: center !important;
-background-color: #F5EE9E;
-border-radius: 5px;
-margin-top: 8px;
-line-height: 1;
-color: black !important;
+position: absolute;
+right: 0px;
+width: 91px;
+bottom: 0;
+margin-bottom: -8px;
 }
 jsv-tabs jsv-tab{
     -webkit-box-flex: 1;
@@ -642,7 +641,7 @@ jsv-room-input button{
     flex: 1;
     display: block;
     padding: 5px;
-    width: 100%}
+    }
 
 .row {
     display: -webkit-box;

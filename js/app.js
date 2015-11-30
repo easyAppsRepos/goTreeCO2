@@ -431,6 +431,12 @@ function cargarRanking(){
 
 
 	//jrCH
+$("*").scrollstart(function(ev){
+	console.log("tttt" );
+});
+
+
+
    function refreshRank(){
         console.log('refreshRank');
         $("#ranking").html(spinner);
