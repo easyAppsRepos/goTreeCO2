@@ -5,9 +5,30 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
 	
 	 openFB.init({appId: '981288545270222'});
+//FFFFFFFFFFFFFFFFFFF
 
-	document.addEventListener("touchmove", function(){console.log("sssff");}, false);
+var mypos = $('#2').offset().top;
+var up = false;
+var newscroll;
 
+	document.addEventListener("touchmove", function(){
+
+
+ newscroll = $('#2').offset().top;
+    if (newscroll > mypos && !up) {
+        $('#menu').stop().slideToggle();
+        up = !up;
+        console.log(up);
+    } else if(newscroll < mypos && up) {
+        $('#menu').stop().slideToggle();
+        up = !up;
+    }
+    mypos = newscroll;
+
+;}, false);
+
+
+//ffffffffffffffffff
 	 document.addEventListener("backbutton", onBackKeyDown, false);
 	enProceso=false;
 	var state = navigator.connection.type;
