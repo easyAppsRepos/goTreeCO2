@@ -3,17 +3,34 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-	
+	pV=true;
+	offSet=0;
 	 openFB.init({appId: '981288545270222'});
 
 
-$("*").scrollend(function(ev){
+$("*").scrollstart(function(ev){
 
-if($("#2").hasClass( "pulsado" )){//
-console.log("en scroll");
-if($('#2').offset().top<-68){$('#puntosXD').animate({marginTop: "0px"}, 500)}
-else{$('#puntosXD').animate({marginTop: "-75px"}, 500)}
-}
+	if($("#2").hasClass( "pulsado" )){//
+		console.log('offset: '+$('#2').offset().top);
+		antOffSet=offSet;
+		offSet=$('#2').offset().top;
+		console.log("en scroll");
+		if($('#2').offset().top<-68){
+			if(pV){
+			$('#puntosXD').animate({marginTop: "0px"}, 500);
+			pV=false;
+			
+			}
+			
+
+		}
+
+		if(antOffSet>offSet && !pV){
+			$('#puntosXD').animate({marginTop: "-75px"}, 500);
+			pV=true;
+			
+		}
+	}
 
 });
 
