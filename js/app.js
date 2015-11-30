@@ -5,6 +5,19 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
 	
 	 openFB.init({appId: '981288545270222'});
+
+
+$("*").scrollend(function(ev){
+
+if($("#2").hasClass( "pulsado" )){//
+console.log("en scroll");
+if($('#2').offset().top<-68){$('#puntosXD').animate({marginTop: "0px"}, 500)}
+else{$('#puntosXD').animate({marginTop: "-75px"}, 500)}
+}
+
+});
+
+
 //FFFFFFFFFFFFFFFFFFF
 /*
 var mypos = $('#2').offset().top;
@@ -13,6 +26,7 @@ var newscroll;
 
 	document.addEventListener("touchmove", function(){
 
+if(scroll
 
  newscroll = $('#2').offset().top;
     if (newscroll > mypos && !up) {
